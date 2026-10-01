@@ -1,1 +1,753 @@
-{"anomalies":[{"dataset":"marketing_campaigns","description":"Paid search daily spend spiked 2.1x above expected — possible bid strategy misconfig on cp105.","detected_at":"2026-05-14","expected_range_high":13100,"expected_range_low":9200,"id":"an01","metric":"spend_usd","severity":"high","type":"spike","value":18400},{"dataset":"customer_data","description":"At-Risk Lapsed segment churn rate elevated; may correlate with delayed loyalty email sends.","detected_at":"2026-05-22","expected_range_high":0.4,"expected_range_low":0.3,"id":"an02","metric":"churn_rate","severity":"medium","type":"spike","value":0.47},{"dataset":"marketing_campaigns","description":"Social campaign cp106 conversions dropped ~60% on June 3 — possible creative fatigue or audience exhaustion.","detected_at":"2026-06-03","expected_range_high":1100,"expected_range_low":820,"id":"an03","metric":"conversions","severity":"high","type":"drop","value":410},{"dataset":"business_performance","description":"MRR exceeded forecast by 2.6% — attributed to upsell campaign success in April.","detected_at":"2026-04-30","expected_range_high":455000,"expected_range_low":430000,"id":"an04","metric":"mrr_usd","severity":"low","type":"spike","value":467000},{"dataset":"marketing_campaigns","description":"Display channel CTR fell below floor threshold — creative refresh recommended.","detected_at":"2026-06-08","expected_range_high":0.03,"expected_range_low":0.02,"id":"an05","metric":"ctr","severity":"medium","type":"drop","value":0.011}],"campaign_performance":[{"campaign_id":"cp101","campaign_name":"Toyota Tacoma Summer Event","channel":"paid_search","clicks":43200,"conversions":3100,"cpa_usd":16.9,"ctr":0.044,"cvr":0.072,"impressions":980000,"period":"2026-04","roas":4.8,"spend_usd":52400.0},{"campaign_id":"cp102","campaign_name":"Grocery Outlet Back-to-School","channel":"social","clicks":61000,"conversions":1850,"cpa_usd":20.92,"ctr":0.028,"cvr":0.03,"impressions":2150000,"period":"2026-04","roas":3.1,"spend_usd":38700.0},{"campaign_id":"cp103","campaign_name":"Visit California Coastal Escapes","channel":"email","clicks":89500,"conversions":7200,"cpa_usd":1.14,"ctr":0.218,"cvr":0.08,"impressions":410000,"period":"2026-05","roas":11.2,"spend_usd":8200.0},{"campaign_id":"cp104","campaign_name":"AAA Road Trip Safety","channel":"organic","clicks":31400,"conversions":2640,"cpa_usd":1.93,"ctr":0.056,"cvr":0.084,"impressions":560000,"period":"2026-05","roas":14.6,"spend_usd":5100.0},{"campaign_id":"cp105","campaign_name":"VSP Vision Care Awareness","channel":"paid_search","clicks":58900,"conversions":4120,"cpa_usd":17.31,"ctr":0.044,"cvr":0.07,"impressions":1340000,"period":"2026-06","roas":4.5,"spend_usd":71300.0},{"campaign_id":"cp106","campaign_name":"Duckhorn Harvest Season","channel":"social","clicks":74000,"conversions":2200,"cpa_usd":20.45,"ctr":0.023,"cvr":0.03,"impressions":3200000,"period":"2026-06","roas":2.9,"spend_usd":45000.0},{"campaign_id":"cp107","campaign_name":"McDonald's McCrispy Summer","channel":"email","clicks":71000,"conversions":5900,"cpa_usd":1.08,"ctr":0.222,"cvr":0.083,"impressions":320000,"period":"2026-06","roas":13.1,"spend_usd":6400.0}],"channel_roi":[{"avg_roas":4.79,"channel":"paid_search","conversions":7220,"cpa_usd":17.13,"revenue_attributed_usd":592000,"roi_pct":378.7,"spend_usd":123700},{"avg_roas":2.92,"channel":"social","conversions":4050,"cpa_usd":20.67,"revenue_attributed_usd":244000,"roi_pct":191.5,"spend_usd":83700},{"avg_roas":13.42,"channel":"email","conversions":13100,"cpa_usd":1.11,"revenue_attributed_usd":196000,"roi_pct":1242.5,"spend_usd":14600},{"avg_roas":23.14,"channel":"organic","conversions":2640,"cpa_usd":1.93,"revenue_attributed_usd":118000,"roi_pct":2213.7,"spend_usd":5100},{"avg_roas":1.95,"channel":"display","conversions":980,"cpa_usd":32.04,"revenue_attributed_usd":61200,"roi_pct":94.9,"spend_usd":31400},{"avg_roas":4.09,"channel":"affiliate","conversions":1740,"cpa_usd":10.46,"revenue_attributed_usd":74500,"roi_pct":309.3,"spend_usd":18200}],"customer_lifetime_value":[{"avg_clv_usd":1840.0,"clv_12m":620.0,"clv_36m":1840.0,"cohort":"2024-Q1","model_version":"clv-v3.2","predicted_orders":14.8,"segment_id":"sg01"},{"avg_clv_usd":310.0,"clv_12m":105.0,"clv_36m":310.0,"cohort":"2024-Q2","model_version":"clv-v3.2","predicted_orders":3.2,"segment_id":"sg02"},{"avg_clv_usd":290.0,"clv_12m":145.0,"clv_36m":290.0,"cohort":"2026-Q1","model_version":"clv-v3.2","predicted_orders":3.8,"segment_id":"sg03"},{"avg_clv_usd":980.0,"clv_12m":375.0,"clv_36m":980.0,"cohort":"2023-Q4","model_version":"clv-v3.2","predicted_orders":9.1,"segment_id":"sg04"},{"avg_clv_usd":140.0,"clv_12m":28.0,"clv_36m":140.0,"cohort":"2023-Q2","model_version":"clv-v3.2","predicted_orders":1.4,"segment_id":"sg05"}],"customer_segments":[{"attributes":["high AOV","repeat buyer","low churn"],"avg_order_value":310.5,"avg_sessions_per_month":8.2,"churn_rate":0.04,"primary_channel":"email","segment_id":"sg01","segment_name":"High-Value Champions","size":12400},{"attributes":["no purchase 90d","high churn risk"],"avg_order_value":95.0,"avg_sessions_per_month":1.1,"churn_rate":0.38,"primary_channel":"paid_search","segment_id":"sg02","segment_name":"At-Risk Lapsed","size":28700},{"attributes":["first purchase <30d","price-sensitive"],"avg_order_value":72.3,"avg_sessions_per_month":2.4,"churn_rate":0.21,"primary_channel":"social","segment_id":"sg03","segment_name":"New Acquisitions","size":51200},{"attributes":["consistent buyer","brand-engaged"],"avg_order_value":148.75,"avg_sessions_per_month":5.1,"churn_rate":0.09,"primary_channel":"organic","segment_id":"sg04","segment_name":"Loyal Mid-Tier","size":34900},{"attributes":["inactive >180d","reactivation target"],"avg_order_value":44.0,"avg_sessions_per_month":0.3,"churn_rate":0.61,"primary_channel":"email","segment_id":"sg05","segment_name":"Dormant Users","size":19300}],"datasets":[{"description":"All campaign-level spend, impressions, and conversion data","id":"ds001","last_updated":"2026-07-15","name":"marketing_campaigns","region":"US","table_count":4},{"description":"Customer profiles, segments, CLV, and behavioral data","id":"ds002","last_updated":"2026-07-15","name":"customer_data","region":"US","table_count":5},{"description":"Revenue, MRR, ARR, and growth metrics","id":"ds003","last_updated":"2026-07-15","name":"business_performance","region":"US","table_count":3},{"description":"Stage-by-stage funnel conversion data","id":"ds004","last_updated":"2026-07-15","name":"funnel_analytics","region":"US","table_count":2},{"description":"Cross-channel ROI and attribution data","id":"ds005","last_updated":"2026-07-15","name":"channel_attribution","region":"US","table_count":3}],"export_jobs":[{"destination":"google_sheets","exported_at":"2026-07-09T14:25:00Z","job_id":"ex01","query_id":"qr01","rows_exported":7,"sheet_name":"Campaign Performance July 2026","status":"completed"},{"bucket":"gs://mcp-exports/clv-report-june.csv","destination":"cloud_storage","exported_at":"2026-07-09T15:10:00Z","job_id":"ex02","query_id":"qr02","rows_exported":5,"status":"completed"},{"destination":"csv_download","exported_at":"2026-07-10T08:50:00Z","filename":"agency_revenue_summary_2026.csv","job_id":"ex03","query_id":"qr03","rows_exported":5,"status":"completed"}],"funnel_analysis":[{"avg_time_in_stage_hrs":0.5,"conversion_rate":0.318,"drop_off_pct":0.682,"stage":"Awareness","stage_order":1,"users_entered":980000,"users_exited":312000},{"avg_time_in_stage_hrs":18.3,"conversion_rate":0.304,"drop_off_pct":0.696,"stage":"Consideration","stage_order":2,"users_entered":312000,"users_exited":94800},{"avg_time_in_stage_hrs":6.7,"conversion_rate":0.435,"drop_off_pct":0.565,"stage":"Intent","stage_order":3,"users_entered":94800,"users_exited":41200},{"avg_time_in_stage_hrs":1.2,"conversion_rate":0.701,"drop_off_pct":0.299,"stage":"Purchase","stage_order":4,"users_entered":41200,"users_exited":28900},{"avg_time_in_stage_hrs":720.0,"conversion_rate":0.685,"drop_off_pct":0.315,"stage":"Retention","stage_order":5,"users_entered":28900,"users_exited":19800}],"insight_reports":[{"anomalies_flagged":["an01","an03"],"generated_at":"2026-07-10T09:14:00Z","key_trends":["Email ROAS +13.4x","Organic CPA lowest at $1.93","Social conversion rate flat QoQ"],"recommendations":["Increase email send frequency for sg04","A/B test new social creatives for cp106","Review paid search bid caps for cp105"],"report_id":"ir01","summary":"Paid search and email continue to deliver the strongest ROI across H/L Partners client campaigns. Paid search drives volume but at 4-5x the cost-per-acquisition. Social shows brand lift but poor direct conversion. Recommend reallocating 15% of social budget to email nurture flows.","time_range":"2026-04-01 to 2026-06-30","topic":"Q2 Campaign Performance"},{"anomalies_flagged":["an02"],"generated_at":"2026-07-01T11:30:00Z","key_trends":["sg01 CLV up 6% YoY","sg05 grew by 1,200 users in May","sg03 new acquisition volume strong"],"recommendations":["Launch win-back campaign for sg05","Offer loyalty incentive to sg02 before 120d lapse threshold","Invest in onboarding flow for sg03 to reduce early churn"],"report_id":"ir02","summary":"High-Value Champions (sg01) remain healthy with 4% churn and CLV of $1,840. Dormant Users (sg05) at critical risk — 61% churn and minimal sessions. At-Risk Lapsed segment grew 8% MoM, signaling retention issues among mid-funnel customers.","time_range":"2026-05-01 to 2026-05-31","topic":"Customer Segment Health"}],"query_history":[{"executed_at":"2026-07-09T14:22:00Z","execution_ms":840,"query_id":"qr01","rows_returned":7,"sql":"SELECT campaign_name, SUM(spend_usd) as total_spend, SUM(conversions) as total_conv FROM marketing_campaigns.client_campaign_performance GROUP BY campaign_name ORDER BY total_spend DESC LIMIT 10"},{"executed_at":"2026-07-09T15:05:00Z","execution_ms":1120,"query_id":"qr02","rows_returned":5,"sql":"SELECT segment_name, size, avg_clv_usd FROM customer_data.customer_segments JOIN customer_data.clv_estimates USING(segment_id) ORDER BY avg_clv_usd DESC"},{"executed_at":"2026-07-10T08:47:00Z","execution_ms":610,"query_id":"qr03","rows_returned":5,"sql":"SELECT period, mrr_usd, mom_growth_pct FROM business_performance.revenue_summary WHERE period >= '2025-01' ORDER BY period ASC"}],"revenue_summary":[{"arr_usd":4944000,"mom_growth_pct":2.1,"mrr_usd":412000,"period":"2026-01","total_revenue_usd":1820000,"yoy_growth_pct":18.4},{"arr_usd":5136000,"mom_growth_pct":4.9,"mrr_usd":428000,"period":"2026-02","total_revenue_usd":1910000,"yoy_growth_pct":19.7},{"arr_usd":5412000,"mom_growth_pct":6.8,"mrr_usd":451000,"period":"2026-03","total_revenue_usd":2040000,"yoy_growth_pct":22.1},{"arr_usd":5604000,"mom_growth_pct":8.6,"mrr_usd":467000,"period":"2026-04","total_revenue_usd":2215000,"yoy_growth_pct":24.3},{"arr_usd":5868000,"mom_growth_pct":7.4,"mrr_usd":489000,"period":"2026-05","total_revenue_usd":2380000,"yoy_growth_pct":26.8}],"table_schemas":[{"columns":[{"description":"Unique campaign identifier","name":"campaign_id","type":"STRING"},{"description":"Human-readable campaign name","name":"campaign_name","type":"STRING"},{"description":"Marketing channel","name":"channel","type":"STRING"},{"description":"Total ad impressions","name":"impressions","type":"INTEGER"},{"description":"Total clicks","name":"clicks","type":"INTEGER"},{"description":"Total conversions","name":"conversions","type":"INTEGER"},{"description":"Total spend in USD","name":"spend_usd","type":"FLOAT"},{"description":"Reporting date","name":"date","type":"DATE"}],"dataset":"marketing_campaigns","table":"campaign_performance"},{"columns":[{"description":"Unique segment identifier","name":"segment_id","type":"STRING"},{"description":"Segment label","name":"segment_name","type":"STRING"},{"description":"Number of customers in segment","name":"size","type":"INTEGER"},{"description":"Average order value in USD","name":"avg_order_value","type":"FLOAT"},{"description":"30-day churn rate (0-1)","name":"churn_rate","type":"FLOAT"},{"description":"Dominant acquisition channel","name":"primary_channel","type":"STRING"}],"dataset":"customer_data","table":"customer_segments"},{"columns":[{"description":"Linked segment identifier","name":"segment_id","type":"STRING"},{"description":"Customer cohort","name":"cohort","type":"STRING"},{"description":"Average predicted CLV in USD","name":"avg_clv_usd","type":"FLOAT"},{"description":"12-month CLV estimate","name":"clv_12m","type":"FLOAT"},{"description":"36-month CLV estimate","name":"clv_36m","type":"FLOAT"},{"description":"ML model version used","name":"model_version","type":"STRING"}],"dataset":"customer_data","table":"clv_estimates"},{"columns":[{"description":"Reporting period","name":"period","type":"STRING"},{"description":"Total revenue in USD","name":"total_revenue_usd","type":"FLOAT"},{"description":"Monthly Recurring Revenue","name":"mrr_usd","type":"FLOAT"},{"description":"Annual Recurring Revenue","name":"arr_usd","type":"FLOAT"},{"description":"Month-over-month growth %","name":"mom_growth_pct","type":"FLOAT"},{"description":"Year-over-year growth %","name":"yoy_growth_pct","type":"FLOAT"}],"dataset":"business_performance","table":"revenue_summary"},{"columns":[{"description":"Funnel stage name","name":"stage","type":"STRING"},{"description":"Numeric order of stage","name":"stage_order","type":"INTEGER"},{"description":"Users who entered this stage","name":"users_entered","type":"INTEGER"},{"description":"Users who completed this stage","name":"users_exited","type":"INTEGER"},{"description":"Stage conversion rate (0-1)","name":"conversion_rate","type":"FLOAT"},{"description":"Average hours spent in stage","name":"avg_time_in_stage_hrs","type":"FLOAT"}],"dataset":"funnel_analytics","table":"funnel_stages"}]}
+{
+  "anomalies": [
+    {
+      "dataset": "marketing_campaigns",
+      "description": "Paid search daily spend spiked 2.1x above expected — possible bid strategy misconfig on cp105.",
+      "detected_at": "2026-05-14",
+      "expected_range_high": 13100,
+      "expected_range_low": 9200,
+      "id": "an01",
+      "metric": "spend_usd",
+      "severity": "high",
+      "type": "spike",
+      "value": 18400
+    },
+    {
+      "dataset": "customer_data",
+      "description": "At-Risk Lapsed segment churn rate elevated; may correlate with delayed loyalty email sends.",
+      "detected_at": "2026-05-22",
+      "expected_range_high": 0.4,
+      "expected_range_low": 0.3,
+      "id": "an02",
+      "metric": "churn_rate",
+      "severity": "medium",
+      "type": "spike",
+      "value": 0.47
+    },
+    {
+      "dataset": "marketing_campaigns",
+      "description": "Social campaign cp106 conversions dropped ~60% on June 3 — possible creative fatigue or audience exhaustion.",
+      "detected_at": "2026-06-03",
+      "expected_range_high": 1100,
+      "expected_range_low": 820,
+      "id": "an03",
+      "metric": "conversions",
+      "severity": "high",
+      "type": "drop",
+      "value": 410
+    },
+    {
+      "dataset": "business_performance",
+      "description": "MRR exceeded forecast by 2.6% — attributed to upsell campaign success in April.",
+      "detected_at": "2026-04-30",
+      "expected_range_high": 455000,
+      "expected_range_low": 430000,
+      "id": "an04",
+      "metric": "mrr_usd",
+      "severity": "low",
+      "type": "spike",
+      "value": 467000
+    },
+    {
+      "dataset": "marketing_campaigns",
+      "description": "Display channel CTR fell below floor threshold — creative refresh recommended.",
+      "detected_at": "2026-06-08",
+      "expected_range_high": 0.03,
+      "expected_range_low": 0.02,
+      "id": "an05",
+      "metric": "ctr",
+      "severity": "medium",
+      "type": "drop",
+      "value": 0.011
+    }
+  ],
+  "campaign_performance": [
+    {
+      "campaign_id": "cp101",
+      "campaign_name": "AutoMax Tacoma Summer Event",
+      "channel": "paid_search",
+      "clicks": 43200,
+      "conversions": 3100,
+      "cpa_usd": 16.9,
+      "ctr": 0.044,
+      "cvr": 0.072,
+      "impressions": 980000,
+      "period": "2026-04",
+      "roas": 4.8,
+      "spend_usd": 52400.0
+    },
+    {
+      "campaign_id": "cp102",
+      "campaign_name": "ValueFresh Back-to-School",
+      "channel": "social",
+      "clicks": 61000,
+      "conversions": 1850,
+      "cpa_usd": 20.92,
+      "ctr": 0.028,
+      "cvr": 0.03,
+      "impressions": 2150000,
+      "period": "2026-04",
+      "roas": 3.1,
+      "spend_usd": 38700.0
+    },
+    {
+      "campaign_id": "cp103",
+      "campaign_name": "Explore Westcoast Coastal Escapes",
+      "channel": "email",
+      "clicks": 89500,
+      "conversions": 7200,
+      "cpa_usd": 1.14,
+      "ctr": 0.218,
+      "cvr": 0.08,
+      "impressions": 410000,
+      "period": "2026-05",
+      "roas": 11.2,
+      "spend_usd": 8200.0
+    },
+    {
+      "campaign_id": "cp104",
+      "campaign_name": "TravelSafe Road Trip Safety",
+      "channel": "organic",
+      "clicks": 31400,
+      "conversions": 2640,
+      "cpa_usd": 1.93,
+      "ctr": 0.056,
+      "cvr": 0.084,
+      "impressions": 560000,
+      "period": "2026-05",
+      "roas": 14.6,
+      "spend_usd": 5100.0
+    },
+    {
+      "campaign_id": "cp105",
+      "campaign_name": "ClearVision Care Care Awareness",
+      "channel": "paid_search",
+      "clicks": 58900,
+      "conversions": 4120,
+      "cpa_usd": 17.31,
+      "ctr": 0.044,
+      "cvr": 0.07,
+      "impressions": 1340000,
+      "period": "2026-06",
+      "roas": 4.5,
+      "spend_usd": 71300.0
+    },
+    {
+      "campaign_id": "cp106",
+      "campaign_name": "Vinebrook Harvest Season",
+      "channel": "social",
+      "clicks": 74000,
+      "conversions": 2200,
+      "cpa_usd": 20.45,
+      "ctr": 0.023,
+      "cvr": 0.03,
+      "impressions": 3200000,
+      "period": "2026-06",
+      "roas": 2.9,
+      "spend_usd": 45000.0
+    },
+    {
+      "campaign_id": "cp107",
+      "campaign_name": "QuickBite McCrispy Summer",
+      "channel": "email",
+      "clicks": 71000,
+      "conversions": 5900,
+      "cpa_usd": 1.08,
+      "ctr": 0.222,
+      "cvr": 0.083,
+      "impressions": 320000,
+      "period": "2026-06",
+      "roas": 13.1,
+      "spend_usd": 6400.0
+    }
+  ],
+  "channel_roi": [
+    {
+      "avg_roas": 4.79,
+      "channel": "paid_search",
+      "conversions": 7220,
+      "cpa_usd": 17.13,
+      "revenue_attributed_usd": 592000,
+      "roi_pct": 378.7,
+      "spend_usd": 123700
+    },
+    {
+      "avg_roas": 2.92,
+      "channel": "social",
+      "conversions": 4050,
+      "cpa_usd": 20.67,
+      "revenue_attributed_usd": 244000,
+      "roi_pct": 191.5,
+      "spend_usd": 83700
+    },
+    {
+      "avg_roas": 13.42,
+      "channel": "email",
+      "conversions": 13100,
+      "cpa_usd": 1.11,
+      "revenue_attributed_usd": 196000,
+      "roi_pct": 1242.5,
+      "spend_usd": 14600
+    },
+    {
+      "avg_roas": 23.14,
+      "channel": "organic",
+      "conversions": 2640,
+      "cpa_usd": 1.93,
+      "revenue_attributed_usd": 118000,
+      "roi_pct": 2213.7,
+      "spend_usd": 5100
+    },
+    {
+      "avg_roas": 1.95,
+      "channel": "display",
+      "conversions": 980,
+      "cpa_usd": 32.04,
+      "revenue_attributed_usd": 61200,
+      "roi_pct": 94.9,
+      "spend_usd": 31400
+    },
+    {
+      "avg_roas": 4.09,
+      "channel": "affiliate",
+      "conversions": 1740,
+      "cpa_usd": 10.46,
+      "revenue_attributed_usd": 74500,
+      "roi_pct": 309.3,
+      "spend_usd": 18200
+    }
+  ],
+  "customer_lifetime_value": [
+    {
+      "avg_clv_usd": 1840.0,
+      "clv_12m": 620.0,
+      "clv_36m": 1840.0,
+      "cohort": "2024-Q1",
+      "model_version": "clv-v3.2",
+      "predicted_orders": 14.8,
+      "segment_id": "sg01"
+    },
+    {
+      "avg_clv_usd": 310.0,
+      "clv_12m": 105.0,
+      "clv_36m": 310.0,
+      "cohort": "2024-Q2",
+      "model_version": "clv-v3.2",
+      "predicted_orders": 3.2,
+      "segment_id": "sg02"
+    },
+    {
+      "avg_clv_usd": 290.0,
+      "clv_12m": 145.0,
+      "clv_36m": 290.0,
+      "cohort": "2026-Q1",
+      "model_version": "clv-v3.2",
+      "predicted_orders": 3.8,
+      "segment_id": "sg03"
+    },
+    {
+      "avg_clv_usd": 980.0,
+      "clv_12m": 375.0,
+      "clv_36m": 980.0,
+      "cohort": "2023-Q4",
+      "model_version": "clv-v3.2",
+      "predicted_orders": 9.1,
+      "segment_id": "sg04"
+    },
+    {
+      "avg_clv_usd": 140.0,
+      "clv_12m": 28.0,
+      "clv_36m": 140.0,
+      "cohort": "2023-Q2",
+      "model_version": "clv-v3.2",
+      "predicted_orders": 1.4,
+      "segment_id": "sg05"
+    }
+  ],
+  "customer_segments": [
+    {
+      "attributes": [
+        "high AOV",
+        "repeat buyer",
+        "low churn"
+      ],
+      "avg_order_value": 310.5,
+      "avg_sessions_per_month": 8.2,
+      "churn_rate": 0.04,
+      "primary_channel": "email",
+      "segment_id": "sg01",
+      "segment_name": "High-Value Champions",
+      "size": 12400
+    },
+    {
+      "attributes": [
+        "no purchase 90d",
+        "high churn risk"
+      ],
+      "avg_order_value": 95.0,
+      "avg_sessions_per_month": 1.1,
+      "churn_rate": 0.38,
+      "primary_channel": "paid_search",
+      "segment_id": "sg02",
+      "segment_name": "At-Risk Lapsed",
+      "size": 28700
+    },
+    {
+      "attributes": [
+        "first purchase <30d",
+        "price-sensitive"
+      ],
+      "avg_order_value": 72.3,
+      "avg_sessions_per_month": 2.4,
+      "churn_rate": 0.21,
+      "primary_channel": "social",
+      "segment_id": "sg03",
+      "segment_name": "New Acquisitions",
+      "size": 51200
+    },
+    {
+      "attributes": [
+        "consistent buyer",
+        "brand-engaged"
+      ],
+      "avg_order_value": 148.75,
+      "avg_sessions_per_month": 5.1,
+      "churn_rate": 0.09,
+      "primary_channel": "organic",
+      "segment_id": "sg04",
+      "segment_name": "Loyal Mid-Tier",
+      "size": 34900
+    },
+    {
+      "attributes": [
+        "inactive >180d",
+        "reactivation target"
+      ],
+      "avg_order_value": 44.0,
+      "avg_sessions_per_month": 0.3,
+      "churn_rate": 0.61,
+      "primary_channel": "email",
+      "segment_id": "sg05",
+      "segment_name": "Dormant Users",
+      "size": 19300
+    }
+  ],
+  "datasets": [
+    {
+      "description": "All campaign-level spend, impressions, and conversion data",
+      "id": "ds001",
+      "last_updated": "2026-07-15",
+      "name": "marketing_campaigns",
+      "region": "US",
+      "table_count": 4
+    },
+    {
+      "description": "Customer profiles, segments, CLV, and behavioral data",
+      "id": "ds002",
+      "last_updated": "2026-07-15",
+      "name": "customer_data",
+      "region": "US",
+      "table_count": 5
+    },
+    {
+      "description": "Revenue, MRR, ARR, and growth metrics",
+      "id": "ds003",
+      "last_updated": "2026-07-15",
+      "name": "business_performance",
+      "region": "US",
+      "table_count": 3
+    },
+    {
+      "description": "Stage-by-stage funnel conversion data",
+      "id": "ds004",
+      "last_updated": "2026-07-15",
+      "name": "funnel_analytics",
+      "region": "US",
+      "table_count": 2
+    },
+    {
+      "description": "Cross-channel ROI and attribution data",
+      "id": "ds005",
+      "last_updated": "2026-07-15",
+      "name": "channel_attribution",
+      "region": "US",
+      "table_count": 3
+    }
+  ],
+  "export_jobs": [
+    {
+      "destination": "google_sheets",
+      "exported_at": "2026-07-09T14:25:00Z",
+      "job_id": "ex01",
+      "query_id": "qr01",
+      "rows_exported": 7,
+      "sheet_name": "Campaign Performance July 2026",
+      "status": "completed"
+    },
+    {
+      "bucket": "gs://mcp-exports/clv-report-june.csv",
+      "destination": "cloud_storage",
+      "exported_at": "2026-07-09T15:10:00Z",
+      "job_id": "ex02",
+      "query_id": "qr02",
+      "rows_exported": 5,
+      "status": "completed"
+    },
+    {
+      "destination": "csv_download",
+      "exported_at": "2026-07-10T08:50:00Z",
+      "filename": "agency_revenue_summary_2026.csv",
+      "job_id": "ex03",
+      "query_id": "qr03",
+      "rows_exported": 5,
+      "status": "completed"
+    }
+  ],
+  "funnel_analysis": [
+    {
+      "avg_time_in_stage_hrs": 0.5,
+      "conversion_rate": 0.318,
+      "drop_off_pct": 0.682,
+      "stage": "Awareness",
+      "stage_order": 1,
+      "users_entered": 980000,
+      "users_exited": 312000
+    },
+    {
+      "avg_time_in_stage_hrs": 18.3,
+      "conversion_rate": 0.304,
+      "drop_off_pct": 0.696,
+      "stage": "Consideration",
+      "stage_order": 2,
+      "users_entered": 312000,
+      "users_exited": 94800
+    },
+    {
+      "avg_time_in_stage_hrs": 6.7,
+      "conversion_rate": 0.435,
+      "drop_off_pct": 0.565,
+      "stage": "Intent",
+      "stage_order": 3,
+      "users_entered": 94800,
+      "users_exited": 41200
+    },
+    {
+      "avg_time_in_stage_hrs": 1.2,
+      "conversion_rate": 0.701,
+      "drop_off_pct": 0.299,
+      "stage": "Purchase",
+      "stage_order": 4,
+      "users_entered": 41200,
+      "users_exited": 28900
+    },
+    {
+      "avg_time_in_stage_hrs": 720.0,
+      "conversion_rate": 0.685,
+      "drop_off_pct": 0.315,
+      "stage": "Retention",
+      "stage_order": 5,
+      "users_entered": 28900,
+      "users_exited": 19800
+    }
+  ],
+  "insight_reports": [
+    {
+      "anomalies_flagged": [
+        "an01",
+        "an03"
+      ],
+      "generated_at": "2026-07-10T09:14:00Z",
+      "key_trends": [
+        "Email ROAS +13.4x",
+        "Organic CPA lowest at $1.93",
+        "Social conversion rate flat QoQ"
+      ],
+      "recommendations": [
+        "Increase email send frequency for sg04",
+        "A/B test new social creatives for cp106",
+        "Review paid search bid caps for cp105"
+      ],
+      "report_id": "ir01",
+      "summary": "Paid search and email continue to deliver the strongest ROI across Summit Partners client campaigns. Paid search drives volume but at 4-5x the cost-per-acquisition. Social shows brand lift but poor direct conversion. Recommend reallocating 15% of social budget to email nurture flows.",
+      "time_range": "2026-04-01 to 2026-06-30",
+      "topic": "Q2 Campaign Performance"
+    },
+    {
+      "anomalies_flagged": [
+        "an02"
+      ],
+      "generated_at": "2026-07-01T11:30:00Z",
+      "key_trends": [
+        "sg01 CLV up 6% YoY",
+        "sg05 grew by 1,200 users in May",
+        "sg03 new acquisition volume strong"
+      ],
+      "recommendations": [
+        "Launch win-back campaign for sg05",
+        "Offer loyalty incentive to sg02 before 120d lapse threshold",
+        "Invest in onboarding flow for sg03 to reduce early churn"
+      ],
+      "report_id": "ir02",
+      "summary": "High-Value Champions (sg01) remain healthy with 4% churn and CLV of $1,840. Dormant Users (sg05) at critical risk — 61% churn and minimal sessions. At-Risk Lapsed segment grew 8% MoM, signaling retention issues among mid-funnel customers.",
+      "time_range": "2026-05-01 to 2026-05-31",
+      "topic": "Customer Segment Health"
+    }
+  ],
+  "query_history": [
+    {
+      "executed_at": "2026-07-09T14:22:00Z",
+      "execution_ms": 840,
+      "query_id": "qr01",
+      "rows_returned": 7,
+      "sql": "SELECT campaign_name, SUM(spend_usd) as total_spend, SUM(conversions) as total_conv FROM marketing_campaigns.client_campaign_performance GROUP BY campaign_name ORDER BY total_spend DESC LIMIT 10"
+    },
+    {
+      "executed_at": "2026-07-09T15:05:00Z",
+      "execution_ms": 1120,
+      "query_id": "qr02",
+      "rows_returned": 5,
+      "sql": "SELECT segment_name, size, avg_clv_usd FROM customer_data.customer_segments JOIN customer_data.clv_estimates USING(segment_id) ORDER BY avg_clv_usd DESC"
+    },
+    {
+      "executed_at": "2026-07-10T08:47:00Z",
+      "execution_ms": 610,
+      "query_id": "qr03",
+      "rows_returned": 5,
+      "sql": "SELECT period, mrr_usd, mom_growth_pct FROM business_performance.revenue_summary WHERE period >= '2025-01' ORDER BY period ASC"
+    }
+  ],
+  "revenue_summary": [
+    {
+      "arr_usd": 4944000,
+      "mom_growth_pct": 2.1,
+      "mrr_usd": 412000,
+      "period": "2026-01",
+      "total_revenue_usd": 1820000,
+      "yoy_growth_pct": 18.4
+    },
+    {
+      "arr_usd": 5136000,
+      "mom_growth_pct": 4.9,
+      "mrr_usd": 428000,
+      "period": "2026-02",
+      "total_revenue_usd": 1910000,
+      "yoy_growth_pct": 19.7
+    },
+    {
+      "arr_usd": 5412000,
+      "mom_growth_pct": 6.8,
+      "mrr_usd": 451000,
+      "period": "2026-03",
+      "total_revenue_usd": 2040000,
+      "yoy_growth_pct": 22.1
+    },
+    {
+      "arr_usd": 5604000,
+      "mom_growth_pct": 8.6,
+      "mrr_usd": 467000,
+      "period": "2026-04",
+      "total_revenue_usd": 2215000,
+      "yoy_growth_pct": 24.3
+    },
+    {
+      "arr_usd": 5868000,
+      "mom_growth_pct": 7.4,
+      "mrr_usd": 489000,
+      "period": "2026-05",
+      "total_revenue_usd": 2380000,
+      "yoy_growth_pct": 26.8
+    }
+  ],
+  "table_schemas": [
+    {
+      "columns": [
+        {
+          "description": "Unique campaign identifier",
+          "name": "campaign_id",
+          "type": "STRING"
+        },
+        {
+          "description": "Human-readable campaign name",
+          "name": "campaign_name",
+          "type": "STRING"
+        },
+        {
+          "description": "Marketing channel",
+          "name": "channel",
+          "type": "STRING"
+        },
+        {
+          "description": "Total ad impressions",
+          "name": "impressions",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Total clicks",
+          "name": "clicks",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Total conversions",
+          "name": "conversions",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Total spend in USD",
+          "name": "spend_usd",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Reporting date",
+          "name": "date",
+          "type": "DATE"
+        }
+      ],
+      "dataset": "marketing_campaigns",
+      "table": "campaign_performance"
+    },
+    {
+      "columns": [
+        {
+          "description": "Unique segment identifier",
+          "name": "segment_id",
+          "type": "STRING"
+        },
+        {
+          "description": "Segment label",
+          "name": "segment_name",
+          "type": "STRING"
+        },
+        {
+          "description": "Number of customers in segment",
+          "name": "size",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Average order value in USD",
+          "name": "avg_order_value",
+          "type": "FLOAT"
+        },
+        {
+          "description": "30-day churn rate (0-1)",
+          "name": "churn_rate",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Dominant acquisition channel",
+          "name": "primary_channel",
+          "type": "STRING"
+        }
+      ],
+      "dataset": "customer_data",
+      "table": "customer_segments"
+    },
+    {
+      "columns": [
+        {
+          "description": "Linked segment identifier",
+          "name": "segment_id",
+          "type": "STRING"
+        },
+        {
+          "description": "Customer cohort",
+          "name": "cohort",
+          "type": "STRING"
+        },
+        {
+          "description": "Average predicted CLV in USD",
+          "name": "avg_clv_usd",
+          "type": "FLOAT"
+        },
+        {
+          "description": "12-month CLV estimate",
+          "name": "clv_12m",
+          "type": "FLOAT"
+        },
+        {
+          "description": "36-month CLV estimate",
+          "name": "clv_36m",
+          "type": "FLOAT"
+        },
+        {
+          "description": "ML model version used",
+          "name": "model_version",
+          "type": "STRING"
+        }
+      ],
+      "dataset": "customer_data",
+      "table": "clv_estimates"
+    },
+    {
+      "columns": [
+        {
+          "description": "Reporting period",
+          "name": "period",
+          "type": "STRING"
+        },
+        {
+          "description": "Total revenue in USD",
+          "name": "total_revenue_usd",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Monthly Recurring Revenue",
+          "name": "mrr_usd",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Annual Recurring Revenue",
+          "name": "arr_usd",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Month-over-month growth %",
+          "name": "mom_growth_pct",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Year-over-year growth %",
+          "name": "yoy_growth_pct",
+          "type": "FLOAT"
+        }
+      ],
+      "dataset": "business_performance",
+      "table": "revenue_summary"
+    },
+    {
+      "columns": [
+        {
+          "description": "Funnel stage name",
+          "name": "stage",
+          "type": "STRING"
+        },
+        {
+          "description": "Numeric order of stage",
+          "name": "stage_order",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Users who entered this stage",
+          "name": "users_entered",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Users who completed this stage",
+          "name": "users_exited",
+          "type": "INTEGER"
+        },
+        {
+          "description": "Stage conversion rate (0-1)",
+          "name": "conversion_rate",
+          "type": "FLOAT"
+        },
+        {
+          "description": "Average hours spent in stage",
+          "name": "avg_time_in_stage_hrs",
+          "type": "FLOAT"
+        }
+      ],
+      "dataset": "funnel_analytics",
+      "table": "funnel_stages"
+    }
+  ]
+}
