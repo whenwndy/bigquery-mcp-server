@@ -23,122 +23,140 @@ def _match(record: dict, field: str, value: str) -> bool:
 # ---------------------------------------------------------------------------
 
 mcp = FastMCP(
-    name="bigquery-mock",
-    version="1.0.0",
+    name="bigquery-kitsch",
+    version="2.0.0",
     instructions=(
-        "Mock BigQuery analytics platform for H/L Partners. Query campaign performance, "
-        "customer segments, CLV, revenue, funnel analysis, channel ROI, anomalies, and insight reports."
+        "Mock BigQuery analytics platform for Kitsch, a beauty and lifestyle brand. "
+        "Query inventory levels and risk, retail account performance, point-of-sale data, "
+        "buyer meeting prep, revenue summaries, customer segments, channel ROI, and insight reports. "
+        "Key use cases: Inventory Risk Report, Retail Account Performance & POS Analysis, "
+        "and Pre-meeting Retail Buyer Presentations."
     ),
 )
 
+
 # ---------------------------------------------------------------------------
-# Query History
+# Products
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def run_query(
-    sql: str = Field(description="SQL query string to simulate executing (mock: used as keyword search against query history)"),
-    dataset: Optional[str] = Field(default=None, description="Target dataset name (optional, informational)"),
+def get_products(
+    category: Optional[str] = Field(default=None, description="Filter by category, e.g. 'Haircare', 'Sleep & Satin', 'Hair Accessories', 'Styling', 'Gift Sets'"),
+    sku: Optional[str] = Field(default=None, description="Filter by SKU (exact or partial match), e.g. 'KT-CURL-HEATLESS'"),
+    hero_only: Optional[bool] = Field(default=None, description="If true, return only hero/flagship products"),
 ) -> list[dict]:
-    """Simulate running a BigQuery SQL query. This is a mock — it performs a keyword search
-    across the sql field in query_history and returns matching records. If no keywords match,
-    all query_history records are returned."""
-    results = _db["query_history"]
-    keywords = [w for w in sql.lower().split() if len(w) > 3]
-    if keywords:
-        matched = [r for r in results if any(kw in r["sql"].lower() for kw in keywords)]
-        if matched:
-            return matched
+    """Return Kitsch product catalog. Filter by category, SKU, or hero product flag."""
+    results = _db["products"]
+    if category:
+        results = [r for r in results if _match(r, "category", category)]
+    if sku:
+        results = [r for r in results if sku.lower() in r["sku"].lower()]
+    if hero_only is True:
+        results = [r for r in results if r.get("hero_product")]
     return results
 
 
 # ---------------------------------------------------------------------------
-# Datasets
+# Inventory
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def list_datasets(
-    region: Optional[str] = Field(default=None, description="Filter by region, e.g. US"),
+def get_inventory(
+    sku: Optional[str] = Field(default=None, description="Filter by SKU (partial match), e.g. 'KT-CURL-HEATLESS'"),
+    status: Optional[str] = Field(default=None, description="Filter by inventory status: 'critical' | 'at_risk' | 'healthy'"),
 ) -> list[dict]:
-    """List available BigQuery datasets. Optionally filter by region."""
-    results = _db["datasets"]
-    if region:
-        results = [r for r in results if _match(r, "region", region)]
+    """Return inventory levels by SKU including weeks of supply, reorder point, and status.
+    Use status='critical' or status='at_risk' to identify SKUs needing immediate action."""
+    results = _db["inventory"]
+    if sku:
+        results = [r for r in results if sku.lower() in r["sku"].lower()]
+    if status:
+        results = [r for r in results if _match(r, "status", status)]
     return results
 
 
+@mcp.tool()
+def get_inventory_risk_report() -> dict:
+    """Return the full Inventory Risk Report including critical SKUs, at-risk SKUs,
+    recommended actions, and summary. Use this for the Inventory Risk Report deliverable."""
+    return _db["inventory_risk_report"]
+
+
 # ---------------------------------------------------------------------------
-# Table Schemas
+# Retail Accounts
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def get_table_schema(
-    dataset: Optional[str] = Field(default=None, description="Filter by dataset name (partial match)"),
-    table: Optional[str] = Field(default=None, description="Filter by table name (partial match)"),
+def get_retail_accounts(
+    account_name: Optional[str] = Field(default=None, description="Filter by account name (partial match), e.g. 'Target', 'Ulta', 'Walmart'"),
+    channel_type: Optional[str] = Field(default=None, description="Filter by channel type: 'mass_market' | 'specialty_beauty' | 'drug_store' | 'marketplace' | 'direct_to_consumer'"),
+    partnership_tier: Optional[str] = Field(default=None, description="Filter by tier: 'strategic' | 'core' | 'growth' | 'owned'"),
+    underperforming_only: Optional[bool] = Field(default=None, description="If true, return only accounts below plan (ytd_gmv_vs_plan_pct < 1.0)"),
 ) -> list[dict]:
-    """Return table schema definitions. Optionally filter by dataset or table name."""
-    results = _db["table_schemas"]
-    if dataset:
-        results = [r for r in results if _match(r, "dataset", dataset)]
-    if table:
-        results = [r for r in results if _match(r, "table", table)]
+    """Return retail account profiles including GMV, fill rate, in-stock rate, buyer contact,
+    and performance vs plan. Use this for Retail Account Performance analysis."""
+    results = _db["retail_accounts"]
+    if account_name:
+        results = [r for r in results if _match(r, "account_name", account_name)]
+    if channel_type:
+        results = [r for r in results if _match(r, "channel_type", channel_type)]
+    if partnership_tier:
+        results = [r for r in results if _match(r, "partnership_tier", partnership_tier)]
+    if underperforming_only:
+        results = [r for r in results if r.get("ytd_gmv_vs_plan_pct", 1.0) < 1.0]
     return results
 
 
+@mcp.tool()
+def get_retail_performance_report() -> dict:
+    """Return the full Retail Account Performance Report including top performers,
+    underperformers, POS highlights, and strategic recommendations.
+    Use this for the Retail Account Performance & POS Analysis deliverable."""
+    return _db["retail_performance_report"]
+
+
 # ---------------------------------------------------------------------------
-# Campaign Performance
+# POS Data
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def get_campaign_performance(
-    campaign_id: Optional[str] = Field(default=None, description="Filter by campaign ID, e.g. cp101"),
-    channel: Optional[str] = Field(default=None, description="Filter by channel: paid_search | social | email | organic"),
-    period: Optional[str] = Field(default=None, description="Filter by period, e.g. 2026-04 (partial match)"),
+def get_pos_data(
+    account_name: Optional[str] = Field(default=None, description="Filter by retail account name (partial match), e.g. 'Target', 'Ulta'"),
+    sku: Optional[str] = Field(default=None, description="Filter by SKU (partial match)"),
+    period: Optional[str] = Field(default=None, description="Filter by period (partial match), e.g. '2026-09'"),
+    low_sell_through: Optional[bool] = Field(default=None, description="If true, return only records with sell_through_rate below 0.70"),
 ) -> list[dict]:
-    """Return campaign performance records. Optionally filter by campaign ID, channel, or period."""
-    results = _db["campaign_performance"]
-    if campaign_id:
-        results = [r for r in results if r["campaign_id"].lower() == campaign_id.lower()]
-    if channel:
-        results = [r for r in results if _match(r, "channel", channel)]
+    """Return point-of-sale data by retail account and SKU including units sold, revenue,
+    sell-through rate, in-stock rate, returns, and velocity rank."""
+    results = _db["pos_data"]
+    if account_name:
+        results = [r for r in results if _match(r, "account_name", account_name)]
+    if sku:
+        results = [r for r in results if sku.lower() in r["sku"].lower()]
     if period:
         results = [r for r in results if _match(r, "period", period)]
+    if low_sell_through:
+        results = [r for r in results if r.get("sell_through_rate", 1.0) < 0.70]
     return results
 
 
 # ---------------------------------------------------------------------------
-# Customer Segments
+# Buyer Meeting Prep
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def get_customer_segments(
-    segment_name: Optional[str] = Field(default=None, description="Filter by segment name (partial match)"),
-    primary_channel: Optional[str] = Field(default=None, description="Filter by primary channel (partial match)"),
+def get_buyer_meeting_prep(
+    account_name: Optional[str] = Field(default=None, description="Filter by account name (partial match), e.g. 'Target', 'Ulta', 'Walmart'"),
+    meeting_id: Optional[str] = Field(default=None, description="Filter by meeting ID, e.g. 'mtg001'"),
 ) -> list[dict]:
-    """Return customer segment records. Optionally filter by segment name or primary channel."""
-    results = _db["customer_segments"]
-    if segment_name:
-        results = [r for r in results if _match(r, "segment_name", segment_name)]
-    if primary_channel:
-        results = [r for r in results if _match(r, "primary_channel", primary_channel)]
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Customer Lifetime Value
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_customer_lifetime_value(
-    segment_id: Optional[str] = Field(default=None, description="Filter by segment ID, e.g. sg01"),
-    cohort: Optional[str] = Field(default=None, description="Filter by cohort, e.g. 2024-Q1 (partial match)"),
-) -> list[dict]:
-    """Return customer lifetime value estimates. Optionally filter by segment ID or cohort."""
-    results = _db["customer_lifetime_value"]
-    if segment_id:
-        results = [r for r in results if r["segment_id"].lower() == segment_id.lower()]
-    if cohort:
-        results = [r for r in results if _match(r, "cohort", cohort)]
+    """Return buyer meeting preparation packages including business snapshot, talking points,
+    expansion opportunities, risks to address, competitive context, and asks from the buyer.
+    Use this for Pre-meeting Retail Buyer Presentation deliverables."""
+    results = _db["buyer_meeting_prep"]
+    if account_name:
+        results = [r for r in results if _match(r, "account", account_name)]
+    if meeting_id:
+        results = [r for r in results if r["meeting_id"].lower() == meeting_id.lower()]
     return results
 
 
@@ -148,43 +166,13 @@ def get_customer_lifetime_value(
 
 @mcp.tool()
 def get_revenue_summary(
-    period: Optional[str] = Field(default=None, description="Filter by period, e.g. 2026-04 (partial match)"),
+    period: Optional[str] = Field(default=None, description="Filter by period, e.g. '2026-09' (partial match)"),
 ) -> list[dict]:
-    """Return monthly revenue summary records including MRR, ARR, and growth metrics. Optionally filter by period."""
+    """Return monthly revenue summary by channel including DTC, retail, and Amazon breakdowns,
+    units sold, AOV, MoM and YoY growth rates."""
     results = _db["revenue_summary"]
     if period:
         results = [r for r in results if _match(r, "period", period)]
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Funnel Analysis
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_funnel_analysis(
-    stage: Optional[str] = Field(default=None, description="Filter by funnel stage name (partial match), e.g. Awareness"),
-) -> list[dict]:
-    """Return funnel analysis data by stage. Optionally filter by stage name."""
-    results = _db["funnel_analysis"]
-    if stage:
-        results = [r for r in results if _match(r, "stage", stage)]
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Insight Reports
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def generate_insight_report(
-    topic: Optional[str] = Field(default=None, description="Filter by report topic (partial match), e.g. Campaign Performance"),
-) -> list[dict]:
-    """Return insight reports. Optionally filter by topic (partial match). Returns all reports if no match found."""
-    results = _db["insight_reports"]
-    if topic:
-        matched = [r for r in results if _match(r, "topic", topic)]
-        return matched if matched else results
     return results
 
 
@@ -194,12 +182,29 @@ def generate_insight_report(
 
 @mcp.tool()
 def get_channel_roi(
-    channel: Optional[str] = Field(default=None, description="Filter by channel name (partial match), e.g. email"),
+    channel: Optional[str] = Field(default=None, description="Filter by channel name (partial match), e.g. 'Amazon', 'DTC', 'Ulta'"),
 ) -> list[dict]:
-    """Return channel ROI and attribution data. Optionally filter by channel name."""
+    """Return channel-level ROI, ROAS, CAC, and contribution margin data across
+    DTC, Amazon, and all retail partners."""
     results = _db["channel_roi"]
     if channel:
         results = [r for r in results if _match(r, "channel", channel)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Customer Segments
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_customer_segments(
+    segment_name: Optional[str] = Field(default=None, description="Filter by segment name (partial match), e.g. 'Satin Loyalists', 'TikTok Converts', 'Eco Shoppers'"),
+) -> list[dict]:
+    """Return Kitsch customer segments including size, AOV, CLV, churn rate, and primary channel.
+    Segments: Satin Loyalists, TikTok Converts, Eco Shoppers, Gift Buyers, Subscription Members."""
+    results = _db["customer_segments"]
+    if segment_name:
+        results = [r for r in results if _match(r, "segment_name", segment_name)]
     return results
 
 
@@ -209,31 +214,100 @@ def get_channel_roi(
 
 @mcp.tool()
 def detect_anomalies(
-    dataset: Optional[str] = Field(default=None, description="Filter by dataset name (partial match)"),
-    metric: Optional[str] = Field(default=None, description="Filter by metric name (partial match), e.g. spend_usd"),
-    severity: Optional[str] = Field(default=None, description="Filter by severity: high | medium | low"),
+    dataset: Optional[str] = Field(default=None, description="Filter by dataset name (partial match), e.g. 'inventory_ops', 'retail_pos'"),
+    severity: Optional[str] = Field(default=None, description="Filter by severity: 'high' | 'medium' | 'low'"),
+    metric: Optional[str] = Field(default=None, description="Filter by metric name (partial match), e.g. 'in_stock_rate', 'weeks_of_supply'"),
 ) -> list[dict]:
-    """Return detected anomalies. Optionally filter by dataset, metric, or severity."""
+    """Return detected data anomalies across inventory, POS, and revenue datasets.
+    Use to surface risks and unexpected signals."""
     results = _db["anomalies"]
     if dataset:
         results = [r for r in results if _match(r, "dataset", dataset)]
-    if metric:
-        results = [r for r in results if _match(r, "metric", metric)]
     if severity:
         results = [r for r in results if _match(r, "severity", severity)]
+    if metric:
+        results = [r for r in results if _match(r, "metric", metric)]
     return results
 
 
 # ---------------------------------------------------------------------------
-# Export Jobs
+# Insight Reports
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def export_query_results(
-    query_id: Optional[str] = Field(default=None, description="Filter by query ID, e.g. qr01"),
-    destination: Optional[str] = Field(default=None, description="Filter by destination (partial match), e.g. google_sheets"),
+def generate_insight_report(
+    topic: Optional[str] = Field(default=None, description="Filter by topic (partial match): 'Inventory Risk' | 'Retail Account Performance' | 'Pre-Meeting Buyer Preparation'"),
+    account: Optional[str] = Field(default=None, description="Filter buyer prep reports by account name, e.g. 'Target'"),
 ) -> list[dict]:
-    """Return export job records. Optionally filter by query ID or destination."""
+    """Return pre-generated insight reports. Topics available:
+    - 'Inventory Risk': critical SKU analysis and action plan
+    - 'Retail Account Performance': account-level POS and performance summary
+    - 'Pre-Meeting Buyer Preparation': meeting-specific talking points and asks (filter by account)
+    Returns all reports if no match found."""
+    results = _db["insight_reports"]
+    if topic:
+        matched = [r for r in results if _match(r, "topic", topic)]
+        results = matched if matched else results
+    if account:
+        results = [r for r in results if _match(r, "topic", account) or _match(r, "summary", account)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Datasets & Schemas
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def list_datasets(
+    region: Optional[str] = Field(default=None, description="Filter by region, e.g. 'US'"),
+) -> list[dict]:
+    """List available Kitsch BigQuery datasets."""
+    results = _db["datasets"]
+    if region:
+        results = [r for r in results if _match(r, "region", region)]
+    return results
+
+
+@mcp.tool()
+def get_table_schema(
+    dataset: Optional[str] = Field(default=None, description="Filter by dataset name (partial match)"),
+    table: Optional[str] = Field(default=None, description="Filter by table name (partial match)"),
+) -> list[dict]:
+    """Return table schema definitions for Kitsch BigQuery tables."""
+    results = _db["table_schemas"]
+    if dataset:
+        results = [r for r in results if _match(r, "dataset", dataset)]
+    if table:
+        results = [r for r in results if _match(r, "table", table)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Query History & Exports
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def run_query(
+    sql: str = Field(description="SQL query to simulate. Used as keyword search against query history."),
+    dataset: Optional[str] = Field(default=None, description="Target dataset name (informational)"),
+) -> list[dict]:
+    """Simulate running a BigQuery SQL query against Kitsch data.
+    Performs keyword search across query history and returns matching records."""
+    results = _db["query_history"]
+    keywords = [w for w in sql.lower().split() if len(w) > 3]
+    if keywords:
+        matched = [r for r in results if any(kw in r["sql"].lower() for kw in keywords)]
+        if matched:
+            return matched
+    return results
+
+
+@mcp.tool()
+def export_query_results(
+    query_id: Optional[str] = Field(default=None, description="Filter by query ID, e.g. 'qr01'"),
+    destination: Optional[str] = Field(default=None, description="Filter by destination (partial match), e.g. 'google_sheets', 'csv_download'"),
+) -> list[dict]:
+    """Return export job records for completed query exports."""
     results = _db["export_jobs"]
     if query_id:
         results = [r for r in results if r["query_id"].lower() == query_id.lower()]

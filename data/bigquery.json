@@ -1,753 +1,1371 @@
 {
-  "anomalies": [
+  "company": {
+    "name": "Kitsch",
+    "industry": "Beauty & Lifestyle",
+    "description": "Kitsch is a beauty and lifestyle brand known for satin pillowcases, hair accessories, heatless curling sets, shampoo bars, and self-care products. Sold DTC and through major retail partners including Target, Ulta, Walmart, Nordstrom, and CVS.",
+    "fiscal_year_start": "January",
+    "currency": "USD",
+    "channels": ["DTC (kitsch.com)", "Amazon", "Target", "Ulta", "Walmart", "Nordstrom", "CVS"]
+  },
+
+  "products": [
     {
-      "dataset": "marketing_campaigns",
-      "description": "Paid search daily spend spiked 2.1x above expected — possible bid strategy misconfig on cp105.",
-      "detected_at": "2026-05-14",
-      "expected_range_high": 13100,
-      "expected_range_low": 9200,
-      "id": "an01",
-      "metric": "spend_usd",
-      "severity": "high",
-      "type": "spike",
-      "value": 18400
+      "sku": "KT-SAT-PIL-Q",
+      "name": "Satin Pillowcase - Queen",
+      "category": "Sleep & Satin",
+      "subcategory": "Pillowcases",
+      "msrp": 25.00,
+      "cost": 6.50,
+      "wholesale_price": 12.50,
+      "margin_pct": 0.74,
+      "launch_date": "2021-03-01",
+      "hero_product": true,
+      "tags": ["bestseller", "satin", "sleep", "hair-care"]
     },
     {
-      "dataset": "customer_data",
-      "description": "At-Risk Lapsed segment churn rate elevated; may correlate with delayed loyalty email sends.",
-      "detected_at": "2026-05-22",
-      "expected_range_high": 0.4,
-      "expected_range_low": 0.3,
-      "id": "an02",
-      "metric": "churn_rate",
-      "severity": "medium",
-      "type": "spike",
-      "value": 0.47
+      "sku": "KT-SAT-PIL-K",
+      "name": "Satin Pillowcase - King",
+      "category": "Sleep & Satin",
+      "subcategory": "Pillowcases",
+      "msrp": 30.00,
+      "cost": 7.80,
+      "wholesale_price": 15.00,
+      "margin_pct": 0.74,
+      "launch_date": "2021-06-01",
+      "hero_product": false,
+      "tags": ["satin", "sleep", "hair-care"]
     },
     {
-      "dataset": "marketing_campaigns",
-      "description": "Social campaign cp106 conversions dropped ~60% on June 3 — possible creative fatigue or audience exhaustion.",
-      "detected_at": "2026-06-03",
-      "expected_range_high": 1100,
-      "expected_range_low": 820,
-      "id": "an03",
-      "metric": "conversions",
-      "severity": "high",
-      "type": "drop",
-      "value": 410
+      "sku": "KT-CURL-HEATLESS",
+      "name": "Heatless Curling Set",
+      "category": "Styling",
+      "subcategory": "Heatless Tools",
+      "msrp": 28.00,
+      "cost": 7.00,
+      "wholesale_price": 14.00,
+      "margin_pct": 0.75,
+      "launch_date": "2022-01-15",
+      "hero_product": true,
+      "tags": ["bestseller", "curling", "heatless", "viral", "tiktok"]
     },
     {
-      "dataset": "business_performance",
-      "description": "MRR exceeded forecast by 2.6% — attributed to upsell campaign success in April.",
-      "detected_at": "2026-04-30",
-      "expected_range_high": 455000,
-      "expected_range_low": 430000,
-      "id": "an04",
-      "metric": "mrr_usd",
-      "severity": "low",
-      "type": "spike",
-      "value": 467000
+      "sku": "KT-SHMP-BAR-RESTORE",
+      "name": "Restore Shampoo Bar",
+      "category": "Haircare",
+      "subcategory": "Shampoo Bars",
+      "msrp": 14.00,
+      "cost": 3.20,
+      "wholesale_price": 7.00,
+      "margin_pct": 0.77,
+      "launch_date": "2022-09-01",
+      "hero_product": true,
+      "tags": ["bestseller", "shampoo-bar", "sustainable", "eco-friendly"]
     },
     {
-      "dataset": "marketing_campaigns",
-      "description": "Display channel CTR fell below floor threshold — creative refresh recommended.",
-      "detected_at": "2026-06-08",
-      "expected_range_high": 0.03,
-      "expected_range_low": 0.02,
-      "id": "an05",
-      "metric": "ctr",
-      "severity": "medium",
-      "type": "drop",
-      "value": 0.011
+      "sku": "KT-SHMP-BAR-REPAIR",
+      "name": "Repair Shampoo Bar",
+      "category": "Haircare",
+      "subcategory": "Shampoo Bars",
+      "msrp": 14.00,
+      "cost": 3.20,
+      "wholesale_price": 7.00,
+      "margin_pct": 0.77,
+      "launch_date": "2023-02-01",
+      "hero_product": false,
+      "tags": ["shampoo-bar", "sustainable", "damaged-hair"]
+    },
+    {
+      "sku": "KT-ACC-CLAW-MINI",
+      "name": "Mini Claw Clip Set (6pk)",
+      "category": "Hair Accessories",
+      "subcategory": "Claw Clips",
+      "msrp": 12.00,
+      "cost": 2.80,
+      "wholesale_price": 6.00,
+      "margin_pct": 0.77,
+      "launch_date": "2020-06-01",
+      "hero_product": true,
+      "tags": ["bestseller", "accessories", "claw-clip", "viral"]
+    },
+    {
+      "sku": "KT-ACC-SCRUNCHIE-SAT",
+      "name": "Satin Scrunchie Set (5pk)",
+      "category": "Hair Accessories",
+      "subcategory": "Scrunchies",
+      "msrp": 14.00,
+      "cost": 3.00,
+      "wholesale_price": 7.00,
+      "margin_pct": 0.79,
+      "launch_date": "2019-11-01",
+      "hero_product": false,
+      "tags": ["accessories", "satin", "scrunchie"]
+    },
+    {
+      "sku": "KT-COND-BAR-RESTORE",
+      "name": "Restore Conditioner Bar",
+      "category": "Haircare",
+      "subcategory": "Conditioner Bars",
+      "msrp": 14.00,
+      "cost": 3.40,
+      "wholesale_price": 7.00,
+      "margin_pct": 0.76,
+      "launch_date": "2023-04-01",
+      "hero_product": false,
+      "tags": ["conditioner-bar", "sustainable", "eco-friendly"]
+    },
+    {
+      "sku": "KT-SLEEP-EYE-MASK",
+      "name": "Satin Eye Mask",
+      "category": "Sleep & Satin",
+      "subcategory": "Eye Masks",
+      "msrp": 18.00,
+      "cost": 4.20,
+      "wholesale_price": 9.00,
+      "margin_pct": 0.77,
+      "launch_date": "2022-05-01",
+      "hero_product": false,
+      "tags": ["sleep", "satin", "eye-mask"]
+    },
+    {
+      "sku": "KT-WRAP-SAT-HAIR",
+      "name": "Satin Hair Wrap Towel",
+      "category": "Sleep & Satin",
+      "subcategory": "Hair Wraps",
+      "msrp": 22.00,
+      "cost": 5.50,
+      "wholesale_price": 11.00,
+      "margin_pct": 0.75,
+      "launch_date": "2023-01-01",
+      "hero_product": false,
+      "tags": ["satin", "hair-care", "towel-wrap"]
+    },
+    {
+      "sku": "KT-GIFT-SATIN-SET",
+      "name": "Satin Sleep Gift Set",
+      "category": "Gift Sets",
+      "subcategory": "Sleep",
+      "msrp": 48.00,
+      "cost": 12.00,
+      "wholesale_price": 24.00,
+      "margin_pct": 0.75,
+      "launch_date": "2023-10-01",
+      "hero_product": false,
+      "tags": ["gift-set", "satin", "holiday"]
+    },
+    {
+      "sku": "KT-GIFT-CURL-SET",
+      "name": "Curl & Style Gift Set",
+      "category": "Gift Sets",
+      "subcategory": "Styling",
+      "msrp": 52.00,
+      "cost": 13.50,
+      "wholesale_price": 26.00,
+      "margin_pct": 0.74,
+      "launch_date": "2023-10-01",
+      "hero_product": false,
+      "tags": ["gift-set", "curling", "holiday"]
     }
   ],
-  "campaign_performance": [
+
+  "inventory": [
     {
-      "campaign_id": "cp101",
-      "campaign_name": "AutoMax Tacoma Summer Event",
-      "channel": "paid_search",
-      "clicks": 43200,
-      "conversions": 3100,
-      "cpa_usd": 16.9,
-      "ctr": 0.044,
-      "cvr": 0.072,
-      "impressions": 980000,
-      "period": "2026-04",
-      "roas": 4.8,
-      "spend_usd": 52400.0
+      "sku": "KT-SAT-PIL-Q",
+      "name": "Satin Pillowcase - Queen",
+      "warehouse_units": 18400,
+      "on_order_units": 12000,
+      "allocated_units": 5200,
+      "available_units": 13200,
+      "avg_weekly_sales": 3100,
+      "weeks_of_supply": 4.3,
+      "reorder_point": 9300,
+      "reorder_qty": 15000,
+      "lead_time_weeks": 10,
+      "status": "at_risk",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp102",
-      "campaign_name": "ValueFresh Back-to-School",
-      "channel": "social",
-      "clicks": 61000,
-      "conversions": 1850,
-      "cpa_usd": 20.92,
-      "ctr": 0.028,
-      "cvr": 0.03,
-      "impressions": 2150000,
-      "period": "2026-04",
-      "roas": 3.1,
-      "spend_usd": 38700.0
+      "sku": "KT-SAT-PIL-K",
+      "name": "Satin Pillowcase - King",
+      "warehouse_units": 9200,
+      "on_order_units": 0,
+      "allocated_units": 2100,
+      "available_units": 7100,
+      "avg_weekly_sales": 1400,
+      "weeks_of_supply": 5.1,
+      "reorder_point": 4200,
+      "reorder_qty": 8000,
+      "lead_time_weeks": 10,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp103",
-      "campaign_name": "Explore Westcoast Coastal Escapes",
-      "channel": "email",
-      "clicks": 89500,
-      "conversions": 7200,
-      "cpa_usd": 1.14,
-      "ctr": 0.218,
-      "cvr": 0.08,
-      "impressions": 410000,
-      "period": "2026-05",
-      "roas": 11.2,
-      "spend_usd": 8200.0
+      "sku": "KT-CURL-HEATLESS",
+      "name": "Heatless Curling Set",
+      "warehouse_units": 6800,
+      "on_order_units": 20000,
+      "allocated_units": 4100,
+      "available_units": 2700,
+      "avg_weekly_sales": 4200,
+      "weeks_of_supply": 1.6,
+      "reorder_point": 12600,
+      "reorder_qty": 25000,
+      "lead_time_weeks": 12,
+      "status": "critical",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp104",
-      "campaign_name": "TravelSafe Road Trip Safety",
-      "channel": "organic",
-      "clicks": 31400,
-      "conversions": 2640,
-      "cpa_usd": 1.93,
-      "ctr": 0.056,
-      "cvr": 0.084,
-      "impressions": 560000,
-      "period": "2026-05",
-      "roas": 14.6,
-      "spend_usd": 5100.0
+      "sku": "KT-SHMP-BAR-RESTORE",
+      "name": "Restore Shampoo Bar",
+      "warehouse_units": 22100,
+      "on_order_units": 0,
+      "allocated_units": 3800,
+      "available_units": 18300,
+      "avg_weekly_sales": 2600,
+      "weeks_of_supply": 7.0,
+      "reorder_point": 7800,
+      "reorder_qty": 20000,
+      "lead_time_weeks": 8,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp105",
-      "campaign_name": "ClearVision Care Care Awareness",
-      "channel": "paid_search",
-      "clicks": 58900,
-      "conversions": 4120,
-      "cpa_usd": 17.31,
-      "ctr": 0.044,
-      "cvr": 0.07,
-      "impressions": 1340000,
-      "period": "2026-06",
-      "roas": 4.5,
-      "spend_usd": 71300.0
+      "sku": "KT-SHMP-BAR-REPAIR",
+      "name": "Repair Shampoo Bar",
+      "warehouse_units": 4100,
+      "on_order_units": 0,
+      "allocated_units": 900,
+      "available_units": 3200,
+      "avg_weekly_sales": 1100,
+      "weeks_of_supply": 2.9,
+      "reorder_point": 3300,
+      "reorder_qty": 10000,
+      "lead_time_weeks": 8,
+      "status": "at_risk",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp106",
-      "campaign_name": "Vinebrook Harvest Season",
-      "channel": "social",
-      "clicks": 74000,
-      "conversions": 2200,
-      "cpa_usd": 20.45,
-      "ctr": 0.023,
-      "cvr": 0.03,
-      "impressions": 3200000,
-      "period": "2026-06",
-      "roas": 2.9,
-      "spend_usd": 45000.0
+      "sku": "KT-ACC-CLAW-MINI",
+      "name": "Mini Claw Clip Set (6pk)",
+      "warehouse_units": 31400,
+      "on_order_units": 0,
+      "allocated_units": 6200,
+      "available_units": 25200,
+      "avg_weekly_sales": 3800,
+      "weeks_of_supply": 6.6,
+      "reorder_point": 11400,
+      "reorder_qty": 30000,
+      "lead_time_weeks": 6,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
     },
     {
-      "campaign_id": "cp107",
-      "campaign_name": "QuickBite McCrispy Summer",
-      "channel": "email",
-      "clicks": 71000,
-      "conversions": 5900,
-      "cpa_usd": 1.08,
-      "ctr": 0.222,
-      "cvr": 0.083,
-      "impressions": 320000,
-      "period": "2026-06",
-      "roas": 13.1,
-      "spend_usd": 6400.0
+      "sku": "KT-ACC-SCRUNCHIE-SAT",
+      "name": "Satin Scrunchie Set (5pk)",
+      "warehouse_units": 14200,
+      "on_order_units": 0,
+      "allocated_units": 2400,
+      "available_units": 11800,
+      "avg_weekly_sales": 1900,
+      "weeks_of_supply": 6.2,
+      "reorder_point": 5700,
+      "reorder_qty": 15000,
+      "lead_time_weeks": 6,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
+    },
+    {
+      "sku": "KT-COND-BAR-RESTORE",
+      "name": "Restore Conditioner Bar",
+      "warehouse_units": 8600,
+      "on_order_units": 0,
+      "allocated_units": 1500,
+      "available_units": 7100,
+      "avg_weekly_sales": 1300,
+      "weeks_of_supply": 5.5,
+      "reorder_point": 3900,
+      "reorder_qty": 10000,
+      "lead_time_weeks": 8,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
+    },
+    {
+      "sku": "KT-SLEEP-EYE-MASK",
+      "name": "Satin Eye Mask",
+      "warehouse_units": 2200,
+      "on_order_units": 0,
+      "allocated_units": 800,
+      "available_units": 1400,
+      "avg_weekly_sales": 950,
+      "weeks_of_supply": 1.5,
+      "reorder_point": 2850,
+      "reorder_qty": 8000,
+      "lead_time_weeks": 10,
+      "status": "critical",
+      "last_updated": "2026-09-22"
+    },
+    {
+      "sku": "KT-WRAP-SAT-HAIR",
+      "name": "Satin Hair Wrap Towel",
+      "warehouse_units": 7400,
+      "on_order_units": 5000,
+      "allocated_units": 1200,
+      "available_units": 6200,
+      "avg_weekly_sales": 1100,
+      "weeks_of_supply": 5.6,
+      "reorder_point": 3300,
+      "reorder_qty": 8000,
+      "lead_time_weeks": 10,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
+    },
+    {
+      "sku": "KT-GIFT-SATIN-SET",
+      "name": "Satin Sleep Gift Set",
+      "warehouse_units": 3100,
+      "on_order_units": 8000,
+      "allocated_units": 500,
+      "available_units": 2600,
+      "avg_weekly_sales": 400,
+      "weeks_of_supply": 6.5,
+      "reorder_point": 1200,
+      "reorder_qty": 8000,
+      "lead_time_weeks": 12,
+      "status": "healthy",
+      "last_updated": "2026-09-22"
+    },
+    {
+      "sku": "KT-GIFT-CURL-SET",
+      "name": "Curl & Style Gift Set",
+      "warehouse_units": 1800,
+      "on_order_units": 6000,
+      "allocated_units": 400,
+      "available_units": 1400,
+      "avg_weekly_sales": 320,
+      "weeks_of_supply": 4.4,
+      "reorder_point": 960,
+      "reorder_qty": 6000,
+      "lead_time_weeks": 12,
+      "status": "at_risk",
+      "last_updated": "2026-09-22"
     }
   ],
+
+  "retail_accounts": [
+    {
+      "account_id": "ret001",
+      "account_name": "Target",
+      "channel_type": "mass_market",
+      "door_count": 1920,
+      "active_skus": 18,
+      "buyer_name": "Jessica Morrow",
+      "buyer_email": "j.morrow@target.com",
+      "next_review_date": "2026-10-14",
+      "annual_gmv_usd": 14200000,
+      "ytd_gmv_usd": 10650000,
+      "ytd_gmv_vs_plan_pct": 1.08,
+      "avg_weekly_pos_units": 28400,
+      "fill_rate_pct": 0.94,
+      "in_stock_rate_pct": 0.91,
+      "return_rate_pct": 0.04,
+      "partnership_tier": "strategic",
+      "notes": "Top retail partner. Holiday planogram confirmed. Opportunity to expand shampoo bar assortment in Q1 2027."
+    },
+    {
+      "account_id": "ret002",
+      "account_name": "Ulta Beauty",
+      "channel_type": "specialty_beauty",
+      "door_count": 1380,
+      "active_skus": 24,
+      "buyer_name": "Danielle Chen",
+      "buyer_email": "d.chen@ulta.com",
+      "next_review_date": "2026-10-22",
+      "annual_gmv_usd": 9800000,
+      "ytd_gmv_usd": 7840000,
+      "ytd_gmv_vs_plan_pct": 1.12,
+      "avg_weekly_pos_units": 19600,
+      "fill_rate_pct": 0.97,
+      "in_stock_rate_pct": 0.95,
+      "return_rate_pct": 0.03,
+      "partnership_tier": "strategic",
+      "notes": "Strongest velocity on Heatless Curling Set and Shampoo Bars. Buyer interested in exclusive colorway for Q2 2027. End cap placement confirmed for holiday."
+    },
+    {
+      "account_id": "ret003",
+      "account_name": "Walmart",
+      "channel_type": "mass_market",
+      "door_count": 4400,
+      "active_skus": 10,
+      "buyer_name": "Marcus Reid",
+      "buyer_email": "m.reid@walmart.com",
+      "next_review_date": "2026-11-05",
+      "annual_gmv_usd": 7600000,
+      "ytd_gmv_usd": 4940000,
+      "ytd_gmv_vs_plan_pct": 0.87,
+      "avg_weekly_pos_units": 21200,
+      "fill_rate_pct": 0.88,
+      "in_stock_rate_pct": 0.83,
+      "return_rate_pct": 0.06,
+      "partnership_tier": "growth",
+      "notes": "Underperforming vs plan. Fill rate issues flagged. In-stock rate on pillowcases below 85%. Claw clips over-indexed — buyer open to expanding accessories assortment."
+    },
+    {
+      "account_id": "ret004",
+      "account_name": "Nordstrom",
+      "channel_type": "premium_department",
+      "door_count": 360,
+      "active_skus": 14,
+      "buyer_name": "Alicia Park",
+      "buyer_email": "a.park@nordstrom.com",
+      "next_review_date": "2026-10-30",
+      "annual_gmv_usd": 3400000,
+      "ytd_gmv_usd": 2720000,
+      "ytd_gmv_vs_plan_pct": 1.06,
+      "avg_weekly_pos_units": 6800,
+      "fill_rate_pct": 0.98,
+      "in_stock_rate_pct": 0.96,
+      "return_rate_pct": 0.05,
+      "partnership_tier": "core",
+      "notes": "Gift sets performing above expectations. Buyer reviewing Satin Eye Mask for expanded floor placement. Holiday gift set sell-through at 72%."
+    },
+    {
+      "account_id": "ret005",
+      "account_name": "CVS",
+      "channel_type": "drug_store",
+      "door_count": 9800,
+      "active_skus": 6,
+      "buyer_name": "Todd Simmons",
+      "buyer_email": "t.simmons@cvs.com",
+      "next_review_date": "2026-11-18",
+      "annual_gmv_usd": 2800000,
+      "ytd_gmv_usd": 1820000,
+      "ytd_gmv_vs_plan_pct": 0.91,
+      "avg_weekly_pos_units": 9400,
+      "fill_rate_pct": 0.86,
+      "in_stock_rate_pct": 0.80,
+      "return_rate_pct": 0.07,
+      "partnership_tier": "core",
+      "notes": "Limited assortment (satin pillowcase + claw clips + scrunchies). Shampoo bar test in 200 doors Q4. In-stock issues impacting performance. Opportunity to add Heatless Curling Set."
+    },
+    {
+      "account_id": "ret006",
+      "account_name": "Amazon",
+      "channel_type": "marketplace",
+      "door_count": null,
+      "active_skus": 32,
+      "buyer_name": "Vendor Central",
+      "buyer_email": null,
+      "next_review_date": null,
+      "annual_gmv_usd": 18400000,
+      "ytd_gmv_usd": 14720000,
+      "ytd_gmv_vs_plan_pct": 1.18,
+      "avg_weekly_pos_units": 52000,
+      "fill_rate_pct": 0.99,
+      "in_stock_rate_pct": 0.97,
+      "return_rate_pct": 0.09,
+      "partnership_tier": "strategic",
+      "notes": "Highest volume channel. Heatless Curling Set #3 BSR in Hair Accessories. Shampoo Bars #1 BSR in Solid Shampoo. Subscribe & Save penetration at 28% for haircare SKUs."
+    },
+    {
+      "account_id": "ret007",
+      "account_name": "Kitsch DTC",
+      "channel_type": "direct_to_consumer",
+      "door_count": null,
+      "active_skus": 48,
+      "buyer_name": null,
+      "buyer_email": null,
+      "next_review_date": null,
+      "annual_gmv_usd": 22600000,
+      "ytd_gmv_usd": 17650000,
+      "ytd_gmv_vs_plan_pct": 1.09,
+      "avg_weekly_pos_units": null,
+      "fill_rate_pct": null,
+      "in_stock_rate_pct": 0.98,
+      "return_rate_pct": 0.03,
+      "partnership_tier": "owned",
+      "notes": "Highest margin channel. Email and paid social driving strongest CAC efficiency. Subscription revenue up 34% YoY on haircare bundles. Holiday landing page live Oct 1."
+    }
+  ],
+
+  "pos_data": [
+    {
+      "account_id": "ret001",
+      "account_name": "Target",
+      "sku": "KT-SAT-PIL-Q",
+      "product_name": "Satin Pillowcase - Queen",
+      "period": "2026-09",
+      "units_sold": 14200,
+      "revenue_usd": 355000,
+      "sell_through_rate": 0.78,
+      "avg_selling_price": 25.00,
+      "in_stock_rate": 0.91,
+      "returns_units": 420,
+      "velocity_rank_in_category": 2
+    },
+    {
+      "account_id": "ret001",
+      "account_name": "Target",
+      "sku": "KT-CURL-HEATLESS",
+      "product_name": "Heatless Curling Set",
+      "period": "2026-09",
+      "units_sold": 18600,
+      "revenue_usd": 520800,
+      "sell_through_rate": 0.82,
+      "avg_selling_price": 28.00,
+      "in_stock_rate": 0.89,
+      "returns_units": 310,
+      "velocity_rank_in_category": 1
+    },
+    {
+      "account_id": "ret001",
+      "account_name": "Target",
+      "sku": "KT-ACC-CLAW-MINI",
+      "product_name": "Mini Claw Clip Set (6pk)",
+      "period": "2026-09",
+      "units_sold": 21400,
+      "revenue_usd": 256800,
+      "sell_through_rate": 0.91,
+      "avg_selling_price": 12.00,
+      "in_stock_rate": 0.94,
+      "returns_units": 180,
+      "velocity_rank_in_category": 1
+    },
+    {
+      "account_id": "ret001",
+      "account_name": "Target",
+      "sku": "KT-SHMP-BAR-RESTORE",
+      "product_name": "Restore Shampoo Bar",
+      "period": "2026-09",
+      "units_sold": 9800,
+      "revenue_usd": 137200,
+      "sell_through_rate": 0.74,
+      "avg_selling_price": 14.00,
+      "in_stock_rate": 0.92,
+      "returns_units": 90,
+      "velocity_rank_in_category": 3
+    },
+    {
+      "account_id": "ret002",
+      "account_name": "Ulta Beauty",
+      "sku": "KT-CURL-HEATLESS",
+      "product_name": "Heatless Curling Set",
+      "period": "2026-09",
+      "units_sold": 12400,
+      "revenue_usd": 347200,
+      "sell_through_rate": 0.88,
+      "avg_selling_price": 28.00,
+      "in_stock_rate": 0.96,
+      "returns_units": 140,
+      "velocity_rank_in_category": 1
+    },
+    {
+      "account_id": "ret002",
+      "account_name": "Ulta Beauty",
+      "sku": "KT-SHMP-BAR-RESTORE",
+      "product_name": "Restore Shampoo Bar",
+      "period": "2026-09",
+      "units_sold": 8600,
+      "revenue_usd": 120400,
+      "sell_through_rate": 0.81,
+      "avg_selling_price": 14.00,
+      "in_stock_rate": 0.95,
+      "returns_units": 60,
+      "velocity_rank_in_category": 2
+    },
+    {
+      "account_id": "ret002",
+      "account_name": "Ulta Beauty",
+      "sku": "KT-SAT-PIL-Q",
+      "product_name": "Satin Pillowcase - Queen",
+      "period": "2026-09",
+      "units_sold": 7200,
+      "revenue_usd": 180000,
+      "sell_through_rate": 0.76,
+      "avg_selling_price": 25.00,
+      "in_stock_rate": 0.94,
+      "returns_units": 210,
+      "velocity_rank_in_category": 4
+    },
+    {
+      "account_id": "ret003",
+      "account_name": "Walmart",
+      "sku": "KT-SAT-PIL-Q",
+      "product_name": "Satin Pillowcase - Queen",
+      "period": "2026-09",
+      "units_sold": 11200,
+      "revenue_usd": 280000,
+      "sell_through_rate": 0.61,
+      "avg_selling_price": 25.00,
+      "in_stock_rate": 0.82,
+      "returns_units": 820,
+      "velocity_rank_in_category": 5
+    },
+    {
+      "account_id": "ret003",
+      "account_name": "Walmart",
+      "sku": "KT-ACC-CLAW-MINI",
+      "product_name": "Mini Claw Clip Set (6pk)",
+      "period": "2026-09",
+      "units_sold": 18900,
+      "revenue_usd": 226800,
+      "sell_through_rate": 0.86,
+      "avg_selling_price": 12.00,
+      "in_stock_rate": 0.88,
+      "returns_units": 340,
+      "velocity_rank_in_category": 2
+    },
+    {
+      "account_id": "ret004",
+      "account_name": "Nordstrom",
+      "sku": "KT-GIFT-SATIN-SET",
+      "product_name": "Satin Sleep Gift Set",
+      "period": "2026-09",
+      "units_sold": 1840,
+      "revenue_usd": 88320,
+      "sell_through_rate": 0.72,
+      "avg_selling_price": 48.00,
+      "in_stock_rate": 0.96,
+      "returns_units": 88,
+      "velocity_rank_in_category": 3
+    },
+    {
+      "account_id": "ret004",
+      "account_name": "Nordstrom",
+      "sku": "KT-SAT-PIL-Q",
+      "product_name": "Satin Pillowcase - Queen",
+      "period": "2026-09",
+      "units_sold": 2600,
+      "revenue_usd": 65000,
+      "sell_through_rate": 0.80,
+      "avg_selling_price": 25.00,
+      "in_stock_rate": 0.97,
+      "returns_units": 120,
+      "velocity_rank_in_category": 2
+    },
+    {
+      "account_id": "ret005",
+      "account_name": "CVS",
+      "sku": "KT-SAT-PIL-Q",
+      "product_name": "Satin Pillowcase - Queen",
+      "period": "2026-09",
+      "units_sold": 5800,
+      "revenue_usd": 145000,
+      "sell_through_rate": 0.58,
+      "avg_selling_price": 25.00,
+      "in_stock_rate": 0.79,
+      "returns_units": 490,
+      "velocity_rank_in_category": 8
+    },
+    {
+      "account_id": "ret005",
+      "account_name": "CVS",
+      "sku": "KT-ACC-CLAW-MINI",
+      "product_name": "Mini Claw Clip Set (6pk)",
+      "period": "2026-09",
+      "units_sold": 7400,
+      "revenue_usd": 88800,
+      "sell_through_rate": 0.71,
+      "avg_selling_price": 12.00,
+      "in_stock_rate": 0.82,
+      "returns_units": 220,
+      "velocity_rank_in_category": 4
+    }
+  ],
+
+  "inventory_risk_report": {
+    "generated_at": "2026-09-22T08:00:00Z",
+    "report_period": "2026-09",
+    "summary": "3 SKUs are at critical or at-risk inventory levels ahead of the holiday season. The Heatless Curling Set and Satin Eye Mask are below 2 weeks of supply with no confirmed inbound shipments covering demand. The Satin Pillowcase - Queen is approaching reorder point with 10 weeks lead time — order must be placed by Oct 1 to avoid stockout before Black Friday.",
+    "critical_skus": [
+      {
+        "sku": "KT-CURL-HEATLESS",
+        "name": "Heatless Curling Set",
+        "weeks_of_supply": 1.6,
+        "status": "critical",
+        "risk": "Projected stockout Oct 12. 20,000 units on order but arrival estimated Nov 4 — 3-week gap. Top-selling SKU at Target and Ulta. Recommend expedited freight to cover gap.",
+        "action_required": "Expedite inbound shipment or air freight 5,000 units to cover Oct 12 - Nov 4 window."
+      },
+      {
+        "sku": "KT-SLEEP-EYE-MASK",
+        "name": "Satin Eye Mask",
+        "weeks_of_supply": 1.5,
+        "status": "critical",
+        "risk": "No PO placed. At current velocity, stockout by Oct 5. Lead time 10 weeks means earliest replenishment is Dec. Holiday sales window will be missed entirely.",
+        "action_required": "Place emergency PO immediately. Consider air freight for initial run of 3,000 units."
+      }
+    ],
+    "at_risk_skus": [
+      {
+        "sku": "KT-SAT-PIL-Q",
+        "name": "Satin Pillowcase - Queen",
+        "weeks_of_supply": 4.3,
+        "status": "at_risk",
+        "risk": "Below reorder point with 10-week lead time. Holiday demand surge expected +40% in Nov-Dec. Must order by Oct 1 to land inventory before Black Friday.",
+        "action_required": "Issue PO for 15,000 units by Oct 1."
+      },
+      {
+        "sku": "KT-SHMP-BAR-REPAIR",
+        "name": "Repair Shampoo Bar",
+        "weeks_of_supply": 2.9,
+        "status": "at_risk",
+        "risk": "Below reorder point with 8-week lead time. Ulta planogram expansion in Q4 will increase allocation needs.",
+        "action_required": "Issue PO for 10,000 units within 2 weeks."
+      },
+      {
+        "sku": "KT-GIFT-CURL-SET",
+        "name": "Curl & Style Gift Set",
+        "weeks_of_supply": 4.4,
+        "status": "at_risk",
+        "risk": "Holiday gift set. 6,000 units on order but holiday allocation to Nordstrom and DTC already totals 5,200 units. Net available post-allocation = only 2,200 units.",
+        "action_required": "Confirm holiday allocations and consider increasing PO to 10,000 units."
+      }
+    ],
+    "healthy_skus": ["KT-SAT-PIL-K", "KT-SHMP-BAR-RESTORE", "KT-ACC-CLAW-MINI", "KT-ACC-SCRUNCHIE-SAT", "KT-COND-BAR-RESTORE", "KT-WRAP-SAT-HAIR", "KT-GIFT-SATIN-SET"]
+  },
+
+  "retail_performance_report": {
+    "generated_at": "2026-09-22T09:00:00Z",
+    "report_period": "2026-09",
+    "summary": "Kitsch retail is tracking +6% above plan YTD across strategic accounts. Amazon and DTC remain the top-volume channels. Ulta is the strongest specialty retailer, outperforming plan by 12%. Walmart is the primary underperformer at -13% vs plan, driven by in-stock issues on pillowcases. CVS fill rate has dropped below 87% — jeopardizing the Q4 shampoo bar door expansion.",
+    "top_performers": [
+      {
+        "account": "Amazon",
+        "ytd_gmv_usd": 14720000,
+        "vs_plan": "+18%",
+        "highlight": "Heatless Curling Set #3 BSR in Hair Accessories. Shampoo Bars #1 BSR in Solid Shampoo. Subscribe & Save penetration at 28%."
+      },
+      {
+        "account": "Ulta Beauty",
+        "ytd_gmv_usd": 7840000,
+        "vs_plan": "+12%",
+        "highlight": "Highest in-stock rate across all retail (95%). End cap confirmed for holiday. Buyer open to exclusive colorway."
+      },
+      {
+        "account": "Kitsch DTC",
+        "ytd_gmv_usd": 17650000,
+        "vs_plan": "+9%",
+        "highlight": "Subscription revenue +34% YoY. Email CAC down 18% vs prior year. Holiday landing page live."
+      }
+    ],
+    "underperformers": [
+      {
+        "account": "Walmart",
+        "ytd_gmv_usd": 4940000,
+        "vs_plan": "-13%",
+        "issues": ["In-stock rate 83% (below 90% threshold)", "Fill rate 88% on pillowcases", "High return rate 6%"],
+        "recommended_action": "Address logistics and replenishment cadence. Review pillowcase allocation model for high-volume Walmart doors."
+      },
+      {
+        "account": "CVS",
+        "ytd_gmv_usd": 1820000,
+        "vs_plan": "-9%",
+        "issues": ["In-stock rate 80% on pillowcases", "Fill rate 86% overall", "Q4 shampoo bar expansion at risk if fill rate not improved"],
+        "recommended_action": "Prioritize CVS fill rate before Q4 shampoo bar test. Engage ops team to review DC routing."
+      }
+    ],
+    "pos_highlights": {
+      "fastest_velocity_sku": "Mini Claw Clip Set (6pk) — #1 velocity at Target and #2 at Walmart",
+      "highest_revenue_sku": "Heatless Curling Set — $520,800 at Target in Sep, $347,200 at Ulta",
+      "lowest_sell_through": "Satin Pillowcase - Queen at CVS (58% sell-through, in-stock 79%)",
+      "opportunity": "Heatless Curling Set not yet in CVS — strong velocity at all other major doors suggests clear opportunity"
+    }
+  },
+
+  "buyer_meeting_prep": [
+    {
+      "meeting_id": "mtg001",
+      "account": "Target",
+      "buyer_name": "Jessica Morrow",
+      "meeting_date": "2026-10-14",
+      "meeting_type": "Q1 2027 Line Review",
+      "generated_at": "2026-09-22T10:00:00Z",
+      "business_snapshot": {
+        "ytd_gmv_usd": 10650000,
+        "vs_plan": "+8%",
+        "top_skus": ["Heatless Curling Set", "Mini Claw Clip Set", "Satin Pillowcase - Queen"],
+        "in_stock_rate": "91%",
+        "fill_rate": "94%"
+      },
+      "talking_points": [
+        "YTD performance is +8% vs plan — Kitsch is outperforming comparable beauty brands in the category.",
+        "Heatless Curling Set is the #1 velocity SKU in hair accessories at Target. Suggest expanding facings from 2 to 3 in spring planogram.",
+        "Shampoo Bars drove 9,800 units in September — strong reorder velocity. Recommend adding Repair SKU to the assortment for Q1.",
+        "Mini Claw Clips are #1 in accessories velocity — request 4-foot endcap extension for Q1."
+      ],
+      "expansion_opportunities": [
+        "Add Restore Conditioner Bar alongside Shampoo Bar (complementary bundle opportunity)",
+        "Propose Satin Eye Mask for sleep adjacency placement",
+        "Holiday gift set display: request dedicated 4-foot floor display in beauty gift section"
+      ],
+      "risks_to_address": [
+        "Pillowcase in-stock rate at 91% — flagging proactive reorder to avoid Q4 stockout",
+        "Heatless Curling Set supply tight through Oct — confirm Oct allocation before meeting"
+      ],
+      "competitive_context": "Key competitors in hair accessories (Goody, Conair) saw -4% velocity in September. Kitsch gained +2 shelf positions at Target over the past 6 months.",
+      "asks_from_buyer": [
+        "Confirm Q1 planogram door count for shampoo bars",
+        "Approval for holiday gift set end cap display",
+        "Feedback on Satin Eye Mask test results from 200-door pilot"
+      ]
+    },
+    {
+      "meeting_id": "mtg002",
+      "account": "Ulta Beauty",
+      "buyer_name": "Danielle Chen",
+      "meeting_date": "2026-10-22",
+      "meeting_type": "Holiday & Q1 2027 Planning",
+      "generated_at": "2026-09-22T10:30:00Z",
+      "business_snapshot": {
+        "ytd_gmv_usd": 7840000,
+        "vs_plan": "+12%",
+        "top_skus": ["Heatless Curling Set", "Restore Shampoo Bar", "Satin Pillowcase - Queen"],
+        "in_stock_rate": "95%",
+        "fill_rate": "97%"
+      },
+      "talking_points": [
+        "Kitsch is +12% vs plan at Ulta — the strongest performance among top 10 beauty brands in the hair category YTD.",
+        "Heatless Curling Set has 88% sell-through and is the #1 velocity item in Ulta hair accessories.",
+        "Shampoo Bars at 81% sell-through with a #2 velocity rank — category resonating with Ulta's sustainability-focused shopper.",
+        "Holiday end cap placement confirmed — projecting $1.2M incremental revenue in Q4."
+      ],
+      "expansion_opportunities": [
+        "Exclusive colorway proposal: Champagne/Blush Heatless Curling Set — Ulta-exclusive for Valentine's Day 2027",
+        "Add Conditioner Bar as complement to Shampoo Bar — upsell and bundle opportunity",
+        "Propose Satin Eye Mask for the sleep/wellness adjacency in-store trend",
+        "Gift set expansion: add Curl & Style Gift Set alongside Satin Sleep Set for holiday"
+      ],
+      "risks_to_address": [
+        "Heatless Curling Set supply constraint through Oct 12 — confirm holiday allocation is protected",
+        "Ensure Ulta receives priority allocation from Nov PO arrival"
+      ],
+      "competitive_context": "Dyson Airwrap remains the premium competitor but at 10x price point — Kitsch occupies the accessible, trend-forward position. No major competing heatless curl brands have launched at Ulta in the past 6 months.",
+      "asks_from_buyer": [
+        "Q1 2027 new product introduction calendar",
+        "Confirmation of exclusive colorway feasibility and MOQ",
+        "Holiday sell-through projections by SKU"
+      ]
+    },
+    {
+      "meeting_id": "mtg003",
+      "account": "Walmart",
+      "buyer_name": "Marcus Reid",
+      "meeting_date": "2026-11-05",
+      "meeting_type": "Performance Review & Recovery Plan",
+      "generated_at": "2026-09-22T11:00:00Z",
+      "business_snapshot": {
+        "ytd_gmv_usd": 4940000,
+        "vs_plan": "-13%",
+        "top_skus": ["Mini Claw Clip Set", "Satin Pillowcase - Queen"],
+        "in_stock_rate": "83%",
+        "fill_rate": "88%"
+      },
+      "talking_points": [
+        "YTD is -13% vs plan — primarily driven by supply chain and in-stock issues, not demand weakness.",
+        "Mini Claw Clips are outperforming at Walmart: 86% sell-through, 18,900 units in September alone.",
+        "Claw clip velocity supports an assortment expansion pitch: add Satin Scrunchie Set and Satin Hair Wrap.",
+        "Pillowcase in-stock issues have been traced to DC routing — logistics team has implemented fix effective Oct 1."
+      ],
+      "expansion_opportunities": [
+        "Add Heatless Curling Set — proven velocity at all other major doors; missing from Walmart assortment",
+        "Expand claw clip assortment with larger clip sizes and seasonal colorways",
+        "Propose Restore Shampoo Bar for test in 500 Walmart doors (eco-friendly trend growing in mass)"
+      ],
+      "risks_to_address": [
+        "In-stock rate at 83% risks buyer reducing floor space — come with concrete ops improvement plan",
+        "High return rate (6%) on pillowcases — investigate packaging and consumer expectation mismatch",
+        "Must demonstrate fill rate improvement before requesting assortment expansion"
+      ],
+      "competitive_context": "Goody and Scunci maintain strong presence at Walmart in accessories. Kitsch claw clips outpacing both in velocity per door. Positioning as 'trend-forward accessible' resonates in Walmart's evolving beauty strategy.",
+      "asks_from_buyer": [
+        "Ops improvement plan for fill rate and in-stock",
+        "Return rate root cause analysis",
+        "Proposal for Heatless Curling Set launch at Walmart"
+      ]
+    }
+  ],
+
+  "revenue_summary": [
+    {
+      "period": "2026-04",
+      "channel": "all",
+      "total_revenue_usd": 6840000,
+      "dtc_revenue_usd": 2180000,
+      "retail_revenue_usd": 4660000,
+      "amazon_revenue_usd": 1420000,
+      "units_sold": 198000,
+      "avg_order_value_dtc": 42.80,
+      "mom_growth_pct": 3.2,
+      "yoy_growth_pct": 28.4
+    },
+    {
+      "period": "2026-05",
+      "channel": "all",
+      "total_revenue_usd": 7210000,
+      "dtc_revenue_usd": 2340000,
+      "retail_revenue_usd": 4870000,
+      "amazon_revenue_usd": 1580000,
+      "units_sold": 214000,
+      "avg_order_value_dtc": 44.10,
+      "mom_growth_pct": 5.4,
+      "yoy_growth_pct": 31.2
+    },
+    {
+      "period": "2026-06",
+      "channel": "all",
+      "total_revenue_usd": 7640000,
+      "dtc_revenue_usd": 2510000,
+      "retail_revenue_usd": 5130000,
+      "amazon_revenue_usd": 1720000,
+      "units_sold": 228000,
+      "avg_order_value_dtc": 45.20,
+      "mom_growth_pct": 5.9,
+      "yoy_growth_pct": 33.8
+    },
+    {
+      "period": "2026-07",
+      "channel": "all",
+      "total_revenue_usd": 7920000,
+      "dtc_revenue_usd": 2680000,
+      "retail_revenue_usd": 5240000,
+      "amazon_revenue_usd": 1880000,
+      "units_sold": 236000,
+      "avg_order_value_dtc": 46.80,
+      "mom_growth_pct": 3.7,
+      "yoy_growth_pct": 29.6
+    },
+    {
+      "period": "2026-08",
+      "channel": "all",
+      "total_revenue_usd": 8380000,
+      "dtc_revenue_usd": 2890000,
+      "retail_revenue_usd": 5490000,
+      "amazon_revenue_usd": 2040000,
+      "units_sold": 248000,
+      "avg_order_value_dtc": 48.20,
+      "mom_growth_pct": 5.8,
+      "yoy_growth_pct": 34.1
+    },
+    {
+      "period": "2026-09",
+      "channel": "all",
+      "total_revenue_usd": 8760000,
+      "dtc_revenue_usd": 3020000,
+      "retail_revenue_usd": 5740000,
+      "amazon_revenue_usd": 2180000,
+      "units_sold": 261000,
+      "avg_order_value_dtc": 49.60,
+      "mom_growth_pct": 4.5,
+      "yoy_growth_pct": 36.2
+    }
+  ],
+
   "channel_roi": [
     {
-      "avg_roas": 4.79,
-      "channel": "paid_search",
-      "conversions": 7220,
-      "cpa_usd": 17.13,
-      "revenue_attributed_usd": 592000,
-      "roi_pct": 378.7,
-      "spend_usd": 123700
+      "channel": "DTC (kitsch.com)",
+      "revenue_usd": 17650000,
+      "spend_usd": 4200000,
+      "roas": 4.2,
+      "cac_usd": 28.40,
+      "avg_order_value": 49.60,
+      "contribution_margin_pct": 0.68,
+      "notes": "Email drives 44% of DTC revenue. Paid social ROAS improved to 3.8x after creative refresh in Aug."
     },
     {
-      "avg_roas": 2.92,
-      "channel": "social",
-      "conversions": 4050,
-      "cpa_usd": 20.67,
-      "revenue_attributed_usd": 244000,
-      "roi_pct": 191.5,
-      "spend_usd": 83700
+      "channel": "Amazon",
+      "revenue_usd": 14720000,
+      "spend_usd": 1840000,
+      "roas": 8.0,
+      "cac_usd": null,
+      "avg_order_value": 22.10,
+      "contribution_margin_pct": 0.42,
+      "notes": "High volume, lower margin due to Amazon fees (~15%). Subscribe & Save at 28% penetration for haircare."
     },
     {
-      "avg_roas": 13.42,
-      "channel": "email",
-      "conversions": 13100,
-      "cpa_usd": 1.11,
-      "revenue_attributed_usd": 196000,
-      "roi_pct": 1242.5,
-      "spend_usd": 14600
+      "channel": "Target",
+      "revenue_usd": 10650000,
+      "spend_usd": 680000,
+      "roas": 15.7,
+      "cac_usd": null,
+      "avg_order_value": null,
+      "contribution_margin_pct": 0.38,
+      "notes": "Co-op spend includes endcap and circular placements. Strong velocity and growing door count."
     },
     {
-      "avg_roas": 23.14,
-      "channel": "organic",
-      "conversions": 2640,
-      "cpa_usd": 1.93,
-      "revenue_attributed_usd": 118000,
-      "roi_pct": 2213.7,
-      "spend_usd": 5100
+      "channel": "Ulta Beauty",
+      "revenue_usd": 7840000,
+      "spend_usd": 420000,
+      "roas": 18.7,
+      "cac_usd": null,
+      "avg_order_value": null,
+      "contribution_margin_pct": 0.40,
+      "notes": "Highest in-stock rate. Holiday end cap secured. Buyer open to exclusive skus."
     },
     {
-      "avg_roas": 1.95,
-      "channel": "display",
-      "conversions": 980,
-      "cpa_usd": 32.04,
-      "revenue_attributed_usd": 61200,
-      "roi_pct": 94.9,
-      "spend_usd": 31400
+      "channel": "Walmart",
+      "revenue_usd": 4940000,
+      "spend_usd": 280000,
+      "roas": 17.6,
+      "cac_usd": null,
+      "avg_order_value": null,
+      "contribution_margin_pct": 0.33,
+      "notes": "Underperforming vs plan. In-stock issues suppressing revenue. Lower margin due to Walmart pricing pressure."
     },
     {
-      "avg_roas": 4.09,
-      "channel": "affiliate",
-      "conversions": 1740,
-      "cpa_usd": 10.46,
-      "revenue_attributed_usd": 74500,
-      "roi_pct": 309.3,
-      "spend_usd": 18200
+      "channel": "CVS",
+      "revenue_usd": 1820000,
+      "spend_usd": 90000,
+      "roas": 20.2,
+      "cac_usd": null,
+      "avg_order_value": null,
+      "contribution_margin_pct": 0.34,
+      "notes": "Limited assortment. Q4 shampoo bar test in 200 doors. Fill rate improvement needed."
     }
   ],
-  "customer_lifetime_value": [
-    {
-      "avg_clv_usd": 1840.0,
-      "clv_12m": 620.0,
-      "clv_36m": 1840.0,
-      "cohort": "2024-Q1",
-      "model_version": "clv-v3.2",
-      "predicted_orders": 14.8,
-      "segment_id": "sg01"
-    },
-    {
-      "avg_clv_usd": 310.0,
-      "clv_12m": 105.0,
-      "clv_36m": 310.0,
-      "cohort": "2024-Q2",
-      "model_version": "clv-v3.2",
-      "predicted_orders": 3.2,
-      "segment_id": "sg02"
-    },
-    {
-      "avg_clv_usd": 290.0,
-      "clv_12m": 145.0,
-      "clv_36m": 290.0,
-      "cohort": "2026-Q1",
-      "model_version": "clv-v3.2",
-      "predicted_orders": 3.8,
-      "segment_id": "sg03"
-    },
-    {
-      "avg_clv_usd": 980.0,
-      "clv_12m": 375.0,
-      "clv_36m": 980.0,
-      "cohort": "2023-Q4",
-      "model_version": "clv-v3.2",
-      "predicted_orders": 9.1,
-      "segment_id": "sg04"
-    },
-    {
-      "avg_clv_usd": 140.0,
-      "clv_12m": 28.0,
-      "clv_36m": 140.0,
-      "cohort": "2023-Q2",
-      "model_version": "clv-v3.2",
-      "predicted_orders": 1.4,
-      "segment_id": "sg05"
-    }
-  ],
+
   "customer_segments": [
     {
-      "attributes": [
-        "high AOV",
-        "repeat buyer",
-        "low churn"
-      ],
-      "avg_order_value": 310.5,
-      "avg_sessions_per_month": 8.2,
+      "segment_id": "sg01",
+      "segment_name": "Satin Loyalists",
+      "description": "Customers who purchased satin products 3+ times. High AOV, low churn.",
+      "size": 84200,
+      "avg_order_value": 68.40,
+      "avg_orders_per_year": 4.8,
+      "churn_rate": 0.06,
+      "primary_channel": "email",
+      "top_categories": ["Sleep & Satin", "Hair Accessories"],
+      "clv_12m": 328.00,
+      "attributes": ["high AOV", "repeat buyer", "satin-first"]
+    },
+    {
+      "segment_id": "sg02",
+      "segment_name": "TikTok Converts",
+      "description": "First purchase driven by viral TikTok content (heatless curls, shampoo bars). Younger demo, price-sensitive.",
+      "size": 142000,
+      "avg_order_value": 34.20,
+      "avg_orders_per_year": 1.8,
+      "churn_rate": 0.44,
+      "primary_channel": "social",
+      "top_categories": ["Styling", "Haircare"],
+      "clv_12m": 61.60,
+      "attributes": ["viral-driven", "first-time buyer", "price-sensitive", "under-30"]
+    },
+    {
+      "segment_id": "sg03",
+      "segment_name": "Eco Shoppers",
+      "description": "Customers who purchased shampoo or conditioner bars. Motivated by sustainability. High repurchase on haircare.",
+      "size": 58400,
+      "avg_order_value": 42.80,
+      "avg_orders_per_year": 3.6,
+      "churn_rate": 0.12,
+      "primary_channel": "organic",
+      "top_categories": ["Haircare", "Hair Accessories"],
+      "clv_12m": 154.10,
+      "attributes": ["sustainability-motivated", "repeat buyer", "high-engagement"]
+    },
+    {
+      "segment_id": "sg04",
+      "segment_name": "Gift Buyers",
+      "description": "Customers who purchase primarily in Oct-Dec. High AOV, seasonal. Mostly gift sets.",
+      "size": 31800,
+      "avg_order_value": 82.60,
+      "avg_orders_per_year": 1.2,
+      "churn_rate": 0.68,
+      "primary_channel": "paid_search",
+      "top_categories": ["Gift Sets", "Sleep & Satin"],
+      "clv_12m": 99.10,
+      "attributes": ["seasonal", "high-AOV", "gifting-intent"]
+    },
+    {
+      "segment_id": "sg05",
+      "segment_name": "Subscription Members",
+      "description": "Active subscribers on haircare refill program. Highest LTV. Very low churn.",
+      "size": 22600,
+      "avg_order_value": 38.40,
+      "avg_orders_per_year": 9.2,
       "churn_rate": 0.04,
       "primary_channel": "email",
-      "segment_id": "sg01",
-      "segment_name": "High-Value Champions",
-      "size": 12400
-    },
-    {
-      "attributes": [
-        "no purchase 90d",
-        "high churn risk"
-      ],
-      "avg_order_value": 95.0,
-      "avg_sessions_per_month": 1.1,
-      "churn_rate": 0.38,
-      "primary_channel": "paid_search",
-      "segment_id": "sg02",
-      "segment_name": "At-Risk Lapsed",
-      "size": 28700
-    },
-    {
-      "attributes": [
-        "first purchase <30d",
-        "price-sensitive"
-      ],
-      "avg_order_value": 72.3,
-      "avg_sessions_per_month": 2.4,
-      "churn_rate": 0.21,
-      "primary_channel": "social",
-      "segment_id": "sg03",
-      "segment_name": "New Acquisitions",
-      "size": 51200
-    },
-    {
-      "attributes": [
-        "consistent buyer",
-        "brand-engaged"
-      ],
-      "avg_order_value": 148.75,
-      "avg_sessions_per_month": 5.1,
-      "churn_rate": 0.09,
-      "primary_channel": "organic",
-      "segment_id": "sg04",
-      "segment_name": "Loyal Mid-Tier",
-      "size": 34900
-    },
-    {
-      "attributes": [
-        "inactive >180d",
-        "reactivation target"
-      ],
-      "avg_order_value": 44.0,
-      "avg_sessions_per_month": 0.3,
-      "churn_rate": 0.61,
-      "primary_channel": "email",
-      "segment_id": "sg05",
-      "segment_name": "Dormant Users",
-      "size": 19300
+      "top_categories": ["Haircare"],
+      "clv_12m": 353.30,
+      "attributes": ["subscriber", "highest-LTV", "low-churn", "predictable-revenue"]
     }
   ],
+
   "datasets": [
     {
-      "description": "All campaign-level spend, impressions, and conversion data",
       "id": "ds001",
-      "last_updated": "2026-07-15",
-      "name": "marketing_campaigns",
+      "name": "inventory_ops",
+      "description": "Real-time inventory levels, weeks of supply, reorder points, and PO status by SKU",
+      "last_updated": "2026-09-22",
+      "region": "US",
+      "table_count": 3
+    },
+    {
+      "id": "ds002",
+      "name": "retail_pos",
+      "description": "Point-of-sale data by account, SKU, and period — units sold, sell-through, in-stock rate, returns",
+      "last_updated": "2026-09-22",
       "region": "US",
       "table_count": 4
     },
     {
-      "description": "Customer profiles, segments, CLV, and behavioral data",
-      "id": "ds002",
-      "last_updated": "2026-07-15",
-      "name": "customer_data",
-      "region": "US",
-      "table_count": 5
-    },
-    {
-      "description": "Revenue, MRR, ARR, and growth metrics",
       "id": "ds003",
-      "last_updated": "2026-07-15",
-      "name": "business_performance",
-      "region": "US",
-      "table_count": 3
-    },
-    {
-      "description": "Stage-by-stage funnel conversion data",
-      "id": "ds004",
-      "last_updated": "2026-07-15",
-      "name": "funnel_analytics",
+      "name": "retail_accounts",
+      "description": "Retail partner profiles, GMV, fill rates, buyer contacts, and performance vs plan",
+      "last_updated": "2026-09-22",
       "region": "US",
       "table_count": 2
     },
     {
-      "description": "Cross-channel ROI and attribution data",
+      "id": "ds004",
+      "name": "customer_analytics",
+      "description": "Customer segments, CLV, cohort data, and channel attribution",
+      "last_updated": "2026-09-22",
+      "region": "US",
+      "table_count": 5
+    },
+    {
       "id": "ds005",
-      "last_updated": "2026-07-15",
-      "name": "channel_attribution",
+      "name": "revenue_and_channel",
+      "description": "Monthly revenue summary by channel, ROAS, CAC, and contribution margin",
+      "last_updated": "2026-09-22",
       "region": "US",
       "table_count": 3
     }
   ],
-  "export_jobs": [
+
+  "anomalies": [
     {
-      "destination": "google_sheets",
-      "exported_at": "2026-07-09T14:25:00Z",
-      "job_id": "ex01",
-      "query_id": "qr01",
-      "rows_exported": 7,
-      "sheet_name": "Campaign Performance July 2026",
-      "status": "completed"
+      "id": "an01",
+      "dataset": "inventory_ops",
+      "metric": "weeks_of_supply",
+      "type": "drop",
+      "severity": "high",
+      "value": 1.6,
+      "expected_range_low": 6.0,
+      "expected_range_high": 10.0,
+      "detected_at": "2026-09-20",
+      "description": "Heatless Curling Set weeks-of-supply collapsed to 1.6 weeks — well below the 6-week safety stock target. Projected stockout Oct 12 ahead of holiday season."
     },
     {
-      "bucket": "gs://mcp-exports/clv-report-june.csv",
-      "destination": "cloud_storage",
-      "exported_at": "2026-07-09T15:10:00Z",
-      "job_id": "ex02",
-      "query_id": "qr02",
-      "rows_exported": 5,
-      "status": "completed"
+      "id": "an02",
+      "dataset": "retail_pos",
+      "metric": "in_stock_rate",
+      "type": "drop",
+      "severity": "high",
+      "value": 0.79,
+      "expected_range_low": 0.90,
+      "expected_range_high": 1.0,
+      "detected_at": "2026-09-18",
+      "description": "CVS in-stock rate on Satin Pillowcase - Queen dropped to 79%. Below the 90% threshold required for healthy sell-through and continuation of the Q4 shampoo bar door expansion."
     },
     {
-      "destination": "csv_download",
-      "exported_at": "2026-07-10T08:50:00Z",
-      "filename": "agency_revenue_summary_2026.csv",
-      "job_id": "ex03",
-      "query_id": "qr03",
-      "rows_exported": 5,
-      "status": "completed"
+      "id": "an03",
+      "dataset": "retail_pos",
+      "metric": "return_rate_pct",
+      "type": "spike",
+      "severity": "medium",
+      "value": 0.06,
+      "expected_range_low": 0.02,
+      "expected_range_high": 0.04,
+      "detected_at": "2026-09-15",
+      "description": "Walmart pillowcase return rate spiked to 6% — 2x the expected range. Possible consumer expectation mismatch with packaging or sizing. Needs root cause analysis before buyer meeting."
+    },
+    {
+      "id": "an04",
+      "dataset": "revenue_and_channel",
+      "metric": "mom_growth_pct",
+      "type": "spike",
+      "severity": "low",
+      "value": 5.8,
+      "expected_range_low": 2.0,
+      "expected_range_high": 4.5,
+      "detected_at": "2026-09-01",
+      "description": "August MoM revenue growth hit 5.8% — above the 2-4.5% expected range. Driven by back-to-school social campaign and TikTok viral moment on Heatless Curling Set."
+    },
+    {
+      "id": "an05",
+      "dataset": "inventory_ops",
+      "metric": "weeks_of_supply",
+      "type": "drop",
+      "severity": "high",
+      "value": 1.5,
+      "expected_range_low": 4.0,
+      "expected_range_high": 8.0,
+      "detected_at": "2026-09-21",
+      "description": "Satin Eye Mask weeks-of-supply at 1.5 with no open PO. Stockout projected Oct 5. Holiday sales window will be entirely missed if not addressed immediately."
     }
   ],
-  "funnel_analysis": [
-    {
-      "avg_time_in_stage_hrs": 0.5,
-      "conversion_rate": 0.318,
-      "drop_off_pct": 0.682,
-      "stage": "Awareness",
-      "stage_order": 1,
-      "users_entered": 980000,
-      "users_exited": 312000
-    },
-    {
-      "avg_time_in_stage_hrs": 18.3,
-      "conversion_rate": 0.304,
-      "drop_off_pct": 0.696,
-      "stage": "Consideration",
-      "stage_order": 2,
-      "users_entered": 312000,
-      "users_exited": 94800
-    },
-    {
-      "avg_time_in_stage_hrs": 6.7,
-      "conversion_rate": 0.435,
-      "drop_off_pct": 0.565,
-      "stage": "Intent",
-      "stage_order": 3,
-      "users_entered": 94800,
-      "users_exited": 41200
-    },
-    {
-      "avg_time_in_stage_hrs": 1.2,
-      "conversion_rate": 0.701,
-      "drop_off_pct": 0.299,
-      "stage": "Purchase",
-      "stage_order": 4,
-      "users_entered": 41200,
-      "users_exited": 28900
-    },
-    {
-      "avg_time_in_stage_hrs": 720.0,
-      "conversion_rate": 0.685,
-      "drop_off_pct": 0.315,
-      "stage": "Retention",
-      "stage_order": 5,
-      "users_entered": 28900,
-      "users_exited": 19800
-    }
-  ],
+
   "insight_reports": [
     {
-      "anomalies_flagged": [
-        "an01",
-        "an03"
-      ],
-      "generated_at": "2026-07-10T09:14:00Z",
+      "report_id": "ir01",
+      "topic": "Inventory Risk",
+      "time_range": "2026-09",
+      "generated_at": "2026-09-22T08:00:00Z",
+      "summary": "Three SKUs face critical inventory risk ahead of the holiday season: Heatless Curling Set (1.6 weeks supply, stockout Oct 12), Satin Eye Mask (1.5 weeks, no PO placed, stockout Oct 5), and Satin Pillowcase - Queen (at reorder point, must order by Oct 1). Immediate action required on two critical SKUs to protect Q4 revenue.",
       "key_trends": [
-        "Email ROAS +13.4x",
-        "Organic CPA lowest at $1.93",
-        "Social conversion rate flat QoQ"
+        "Heatless Curling Set demand accelerated +38% MoM in September — exceeding forecast",
+        "Holiday pre-orders from retail accounts have consumed 65% of available inventory",
+        "Satin Eye Mask had no reorder triggered despite being below safety stock since Aug 15"
       ],
       "recommendations": [
-        "Increase email send frequency for sg04",
-        "A/B test new social creatives for cp106",
-        "Review paid search bid caps for cp105"
+        "Expedite 5,000 units of Heatless Curling Set via air freight to cover Oct 12 - Nov 4 gap",
+        "Place emergency PO for Satin Eye Mask immediately — consider air freight for first 3,000 units",
+        "Issue PO for 15,000 Satin Pillowcase - Queen by Oct 1",
+        "Issue PO for 10,000 Repair Shampoo Bar within 2 weeks",
+        "Review holiday allocation model to flag at-risk SKUs earlier in the season"
       ],
-      "report_id": "ir01",
-      "summary": "Paid search and email continue to deliver the strongest ROI across Summit Partners client campaigns. Paid search drives volume but at 4-5x the cost-per-acquisition. Social shows brand lift but poor direct conversion. Recommend reallocating 15% of social budget to email nurture flows.",
-      "time_range": "2026-04-01 to 2026-06-30",
-      "topic": "Q2 Campaign Performance"
+      "anomalies_flagged": ["an01", "an05"]
     },
     {
-      "anomalies_flagged": [
-        "an02"
-      ],
-      "generated_at": "2026-07-01T11:30:00Z",
+      "report_id": "ir02",
+      "topic": "Retail Account Performance",
+      "time_range": "2026-09",
+      "generated_at": "2026-09-22T09:00:00Z",
+      "summary": "Kitsch retail is +6% above plan YTD. Ulta (+12%) and Amazon (+18%) are outperforming. Walmart (-13%) and CVS (-9%) are underperforming driven by operational issues, not demand. Top POS velocity SKUs: Mini Claw Clips (#1 at Target and Walmart), Heatless Curling Set (#1 at Ulta), Shampoo Bars growing velocity at specialty.",
       "key_trends": [
-        "sg01 CLV up 6% YoY",
-        "sg05 grew by 1,200 users in May",
-        "sg03 new acquisition volume strong"
+        "Heatless Curling Set driving outsized revenue at all specialty doors",
+        "Claw clips over-index at mass market (Target, Walmart) — assortment expansion opportunity",
+        "Shampoo Bar velocity accelerating at Ulta and Target — sustainable beauty trend resonating",
+        "DTC subscription revenue +34% YoY, reducing over-reliance on retail"
       ],
       "recommendations": [
-        "Launch win-back campaign for sg05",
-        "Offer loyalty incentive to sg02 before 120d lapse threshold",
-        "Invest in onboarding flow for sg03 to reduce early churn"
+        "Prioritize Ulta holiday allocation given highest in-stock rate and buyer engagement",
+        "Bring ops recovery plan to Walmart meeting — in-stock improvement is prerequisite to expansion",
+        "Pitch Heatless Curling Set to CVS buyer — missing from assortment despite proven mass-market velocity",
+        "Expand shampoo bar assortment at Target (add Repair SKU) in Q1 2027 planogram"
       ],
-      "report_id": "ir02",
-      "summary": "High-Value Champions (sg01) remain healthy with 4% churn and CLV of $1,840. Dormant Users (sg05) at critical risk — 61% churn and minimal sessions. At-Risk Lapsed segment grew 8% MoM, signaling retention issues among mid-funnel customers.",
-      "time_range": "2026-05-01 to 2026-05-31",
-      "topic": "Customer Segment Health"
+      "anomalies_flagged": ["an02", "an03"]
+    },
+    {
+      "report_id": "ir03",
+      "topic": "Pre-Meeting Buyer Preparation - Target",
+      "time_range": "2026-10-14 meeting",
+      "generated_at": "2026-09-22T10:00:00Z",
+      "summary": "Target meeting on Oct 14 with buyer Jessica Morrow for Q1 2027 line review. Kitsch is +8% vs plan at Target with strong velocity across all three pillars (satin, accessories, haircare). Key asks: planogram expansion for Heatless Curling Set, Shampoo Bar assortment add, and holiday gift set end cap. Address pillowcase in-stock proactively.",
+      "key_trends": [
+        "Heatless Curling Set #1 velocity in Target hair accessories at 18,600 units/month",
+        "Claw Clips #1 in accessories with 91% sell-through",
+        "Shampoo Bar performing ahead of comparable eco-beauty brands in category"
+      ],
+      "recommendations": [
+        "Lead with YTD +8% vs plan and category-level velocity data",
+        "Request Heatless Curling Set facing expansion from 2 to 3",
+        "Propose Repair Shampoo Bar as Q1 add",
+        "Confirm holiday gift set end cap and display specs",
+        "Come prepared with Oct 1 pillowcase PO confirmation to pre-empt in-stock concern"
+      ],
+      "anomalies_flagged": []
     }
   ],
+
   "query_history": [
     {
-      "executed_at": "2026-07-09T14:22:00Z",
-      "execution_ms": 840,
       "query_id": "qr01",
-      "rows_returned": 7,
-      "sql": "SELECT campaign_name, SUM(spend_usd) as total_spend, SUM(conversions) as total_conv FROM marketing_campaigns.client_campaign_performance GROUP BY campaign_name ORDER BY total_spend DESC LIMIT 10"
+      "sql": "SELECT sku, name, weeks_of_supply, status FROM inventory WHERE status IN ('critical','at_risk') ORDER BY weeks_of_supply ASC",
+      "executed_at": "2026-09-22T08:05:00Z",
+      "execution_ms": 420,
+      "rows_returned": 5
     },
     {
-      "executed_at": "2026-07-09T15:05:00Z",
-      "execution_ms": 1120,
       "query_id": "qr02",
-      "rows_returned": 5,
-      "sql": "SELECT segment_name, size, avg_clv_usd FROM customer_data.customer_segments JOIN customer_data.clv_estimates USING(segment_id) ORDER BY avg_clv_usd DESC"
+      "sql": "SELECT account_name, ytd_gmv_usd, ytd_gmv_vs_plan_pct, in_stock_rate_pct, fill_rate_pct FROM retail_accounts ORDER BY ytd_gmv_usd DESC",
+      "executed_at": "2026-09-22T09:10:00Z",
+      "execution_ms": 380,
+      "rows_returned": 7
     },
     {
-      "executed_at": "2026-07-10T08:47:00Z",
-      "execution_ms": 610,
       "query_id": "qr03",
-      "rows_returned": 5,
-      "sql": "SELECT period, mrr_usd, mom_growth_pct FROM business_performance.revenue_summary WHERE period >= '2025-01' ORDER BY period ASC"
+      "sql": "SELECT account_name, sku, units_sold, sell_through_rate, in_stock_rate FROM pos_data WHERE period='2026-09' ORDER BY units_sold DESC",
+      "executed_at": "2026-09-22T09:15:00Z",
+      "execution_ms": 510,
+      "rows_returned": 13
+    },
+    {
+      "query_id": "qr04",
+      "sql": "SELECT account_name, buyer_name, meeting_date, ytd_gmv_vs_plan_pct FROM retail_accounts WHERE next_review_date IS NOT NULL ORDER BY next_review_date ASC",
+      "executed_at": "2026-09-22T10:00:00Z",
+      "execution_ms": 290,
+      "rows_returned": 5
     }
   ],
-  "revenue_summary": [
+
+  "export_jobs": [
     {
-      "arr_usd": 4944000,
-      "mom_growth_pct": 2.1,
-      "mrr_usd": 412000,
-      "period": "2026-01",
-      "total_revenue_usd": 1820000,
-      "yoy_growth_pct": 18.4
+      "job_id": "ex01",
+      "query_id": "qr01",
+      "destination": "google_sheets",
+      "sheet_name": "Inventory Risk Report Sep 2026",
+      "exported_at": "2026-09-22T08:10:00Z",
+      "rows_exported": 5,
+      "status": "completed"
     },
     {
-      "arr_usd": 5136000,
-      "mom_growth_pct": 4.9,
-      "mrr_usd": 428000,
-      "period": "2026-02",
-      "total_revenue_usd": 1910000,
-      "yoy_growth_pct": 19.7
+      "job_id": "ex02",
+      "query_id": "qr02",
+      "destination": "google_sheets",
+      "sheet_name": "Retail Account Performance Sep 2026",
+      "exported_at": "2026-09-22T09:20:00Z",
+      "rows_exported": 7,
+      "status": "completed"
     },
     {
-      "arr_usd": 5412000,
-      "mom_growth_pct": 6.8,
-      "mrr_usd": 451000,
-      "period": "2026-03",
-      "total_revenue_usd": 2040000,
-      "yoy_growth_pct": 22.1
-    },
-    {
-      "arr_usd": 5604000,
-      "mom_growth_pct": 8.6,
-      "mrr_usd": 467000,
-      "period": "2026-04",
-      "total_revenue_usd": 2215000,
-      "yoy_growth_pct": 24.3
-    },
-    {
-      "arr_usd": 5868000,
-      "mom_growth_pct": 7.4,
-      "mrr_usd": 489000,
-      "period": "2026-05",
-      "total_revenue_usd": 2380000,
-      "yoy_growth_pct": 26.8
+      "job_id": "ex03",
+      "query_id": "qr04",
+      "destination": "csv_download",
+      "filename": "kitsch_buyer_meeting_prep_oct2026.csv",
+      "exported_at": "2026-09-22T10:05:00Z",
+      "rows_exported": 3,
+      "status": "completed"
     }
   ],
+
   "table_schemas": [
     {
+      "dataset": "inventory_ops",
+      "table": "inventory",
       "columns": [
-        {
-          "description": "Unique campaign identifier",
-          "name": "campaign_id",
-          "type": "STRING"
-        },
-        {
-          "description": "Human-readable campaign name",
-          "name": "campaign_name",
-          "type": "STRING"
-        },
-        {
-          "description": "Marketing channel",
-          "name": "channel",
-          "type": "STRING"
-        },
-        {
-          "description": "Total ad impressions",
-          "name": "impressions",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Total clicks",
-          "name": "clicks",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Total conversions",
-          "name": "conversions",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Total spend in USD",
-          "name": "spend_usd",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Reporting date",
-          "name": "date",
-          "type": "DATE"
-        }
-      ],
-      "dataset": "marketing_campaigns",
-      "table": "campaign_performance"
+        {"name": "sku", "type": "STRING", "description": "Product SKU"},
+        {"name": "name", "type": "STRING", "description": "Product name"},
+        {"name": "warehouse_units", "type": "INTEGER", "description": "Units currently in warehouse"},
+        {"name": "on_order_units", "type": "INTEGER", "description": "Units on open PO not yet received"},
+        {"name": "allocated_units", "type": "INTEGER", "description": "Units reserved for retail allocations"},
+        {"name": "available_units", "type": "INTEGER", "description": "Warehouse units minus allocated"},
+        {"name": "avg_weekly_sales", "type": "INTEGER", "description": "Average units sold per week (trailing 8 weeks)"},
+        {"name": "weeks_of_supply", "type": "FLOAT", "description": "Available units / avg weekly sales"},
+        {"name": "reorder_point", "type": "INTEGER", "description": "Units level that triggers reorder"},
+        {"name": "lead_time_weeks", "type": "INTEGER", "description": "Weeks from PO to warehouse receipt"},
+        {"name": "status", "type": "STRING", "description": "healthy | at_risk | critical"}
+      ]
     },
     {
+      "dataset": "retail_pos",
+      "table": "pos_data",
       "columns": [
-        {
-          "description": "Unique segment identifier",
-          "name": "segment_id",
-          "type": "STRING"
-        },
-        {
-          "description": "Segment label",
-          "name": "segment_name",
-          "type": "STRING"
-        },
-        {
-          "description": "Number of customers in segment",
-          "name": "size",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Average order value in USD",
-          "name": "avg_order_value",
-          "type": "FLOAT"
-        },
-        {
-          "description": "30-day churn rate (0-1)",
-          "name": "churn_rate",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Dominant acquisition channel",
-          "name": "primary_channel",
-          "type": "STRING"
-        }
-      ],
-      "dataset": "customer_data",
-      "table": "customer_segments"
+        {"name": "account_id", "type": "STRING", "description": "Retail account identifier"},
+        {"name": "account_name", "type": "STRING", "description": "Retail partner name"},
+        {"name": "sku", "type": "STRING", "description": "Product SKU"},
+        {"name": "period", "type": "STRING", "description": "Reporting month (YYYY-MM)"},
+        {"name": "units_sold", "type": "INTEGER", "description": "Units sold at retail"},
+        {"name": "revenue_usd", "type": "FLOAT", "description": "Revenue at MSRP"},
+        {"name": "sell_through_rate", "type": "FLOAT", "description": "Units sold / units shipped to retail"},
+        {"name": "in_stock_rate", "type": "FLOAT", "description": "% of days product was in stock at store level"},
+        {"name": "returns_units", "type": "INTEGER", "description": "Units returned by consumers"},
+        {"name": "velocity_rank_in_category", "type": "INTEGER", "description": "Velocity rank vs category peers at this account"}
+      ]
     },
     {
+      "dataset": "retail_accounts",
+      "table": "retail_accounts",
       "columns": [
-        {
-          "description": "Linked segment identifier",
-          "name": "segment_id",
-          "type": "STRING"
-        },
-        {
-          "description": "Customer cohort",
-          "name": "cohort",
-          "type": "STRING"
-        },
-        {
-          "description": "Average predicted CLV in USD",
-          "name": "avg_clv_usd",
-          "type": "FLOAT"
-        },
-        {
-          "description": "12-month CLV estimate",
-          "name": "clv_12m",
-          "type": "FLOAT"
-        },
-        {
-          "description": "36-month CLV estimate",
-          "name": "clv_36m",
-          "type": "FLOAT"
-        },
-        {
-          "description": "ML model version used",
-          "name": "model_version",
-          "type": "STRING"
-        }
-      ],
-      "dataset": "customer_data",
-      "table": "clv_estimates"
-    },
-    {
-      "columns": [
-        {
-          "description": "Reporting period",
-          "name": "period",
-          "type": "STRING"
-        },
-        {
-          "description": "Total revenue in USD",
-          "name": "total_revenue_usd",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Monthly Recurring Revenue",
-          "name": "mrr_usd",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Annual Recurring Revenue",
-          "name": "arr_usd",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Month-over-month growth %",
-          "name": "mom_growth_pct",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Year-over-year growth %",
-          "name": "yoy_growth_pct",
-          "type": "FLOAT"
-        }
-      ],
-      "dataset": "business_performance",
-      "table": "revenue_summary"
-    },
-    {
-      "columns": [
-        {
-          "description": "Funnel stage name",
-          "name": "stage",
-          "type": "STRING"
-        },
-        {
-          "description": "Numeric order of stage",
-          "name": "stage_order",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Users who entered this stage",
-          "name": "users_entered",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Users who completed this stage",
-          "name": "users_exited",
-          "type": "INTEGER"
-        },
-        {
-          "description": "Stage conversion rate (0-1)",
-          "name": "conversion_rate",
-          "type": "FLOAT"
-        },
-        {
-          "description": "Average hours spent in stage",
-          "name": "avg_time_in_stage_hrs",
-          "type": "FLOAT"
-        }
-      ],
-      "dataset": "funnel_analytics",
-      "table": "funnel_stages"
+        {"name": "account_id", "type": "STRING", "description": "Account identifier"},
+        {"name": "account_name", "type": "STRING", "description": "Retail partner name"},
+        {"name": "channel_type", "type": "STRING", "description": "mass_market | specialty_beauty | drug_store | marketplace | direct_to_consumer"},
+        {"name": "ytd_gmv_usd", "type": "FLOAT", "description": "Year-to-date gross merchandise value"},
+        {"name": "ytd_gmv_vs_plan_pct", "type": "FLOAT", "description": "YTD GMV as ratio of plan (1.0 = on plan)"},
+        {"name": "in_stock_rate_pct", "type": "FLOAT", "description": "Average in-stock rate across all doors"},
+        {"name": "fill_rate_pct", "type": "FLOAT", "description": "% of ordered units fulfilled on time and in full"},
+        {"name": "next_review_date", "type": "DATE", "description": "Next scheduled buyer meeting date"}
+      ]
     }
   ]
 }
