@@ -161,6 +161,40 @@ def get_buyer_meeting_prep(
 
 
 # ---------------------------------------------------------------------------
+# Campaign Performance
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_campaign_performance(
+    campaign_id: Optional[str] = Field(default=None, description="Filter by campaign ID, e.g. 'cp001'"),
+    channel: Optional[str] = Field(default=None, description="Filter by channel: 'paid_social' | 'multi_channel'"),
+    platform: Optional[str] = Field(default=None, description="Filter by platform (partial match), e.g. 'TikTok', 'Email', 'Pinterest'"),
+    hero_sku: Optional[str] = Field(default=None, description="Filter by hero SKU (partial match), e.g. 'KT-CURL-HEATLESS'"),
+) -> list[dict]:
+    """Return campaign performance records including spend, impressions, clicks, CTR,
+    conversions, CVR, revenue attributed, ROAS, CPA, new customer %, AOV, top creative,
+    and strategic notes. Use for campaign reporting and channel analysis."""
+    results = _db["campaign_performance"]
+    if campaign_id:
+        results = [r for r in results if r["campaign_id"].lower() == campaign_id.lower()]
+    if channel:
+        results = [r for r in results if _match(r, "channel", channel)]
+    if platform:
+        results = [r for r in results if _match(r, "platform", platform)]
+    if hero_sku:
+        results = [r for r in results if hero_sku.lower() in str(r.get("hero_sku", "")).lower()]
+    return results
+
+
+@mcp.tool()
+def get_campaign_insights() -> dict:
+    """Return the aggregated campaign insights report including blended ROAS, total spend,
+    total attributed revenue, top-performing campaigns, key insights, and strategic recommendations
+    across all Kitsch marketing campaigns. Use for executive summaries and campaign planning."""
+    return _db["campaign_insights"]
+
+
+# ---------------------------------------------------------------------------
 # Revenue Summary
 # ---------------------------------------------------------------------------
 

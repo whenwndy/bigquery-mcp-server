@@ -1089,6 +1089,139 @@
     }
   ],
 
+  "campaign_performance": [
+    {
+      "campaign_id": "cp001",
+      "campaign_name": "Heatless Curls — Back to School",
+      "description": "TikTok and Instagram paid social campaign targeting college-aged women for back-to-school season. Featured UGC-style creative of the heatless curling set morning routine.",
+      "channel": "paid_social",
+      "platform": "TikTok + Instagram",
+      "objective": "Conversion",
+      "period_start": "2026-08-01",
+      "period_end": "2026-08-31",
+      "target_audience": "Women 18-28, interest in beauty, hair care, college lifestyle",
+      "hero_sku": "KT-CURL-HEATLESS",
+      "spend_usd": 48200,
+      "impressions": 4820000,
+      "clicks": 96400,
+      "ctr": 0.02,
+      "conversions": 3860,
+      "cvr": 0.04,
+      "revenue_attributed_usd": 108080,
+      "roas": 2.24,
+      "cpa_usd": 12.49,
+      "new_customer_pct": 0.71,
+      "avg_order_value": 27.99,
+      "top_creative": "UGC morning routine reel — 3.2M views, 6.4% engagement rate",
+      "notes": "TikTok outperformed Instagram 3:1 on CVR. Viral moment on Aug 14 drove 40% of month's conversions in 3 days. Recommend always-on TikTok budget."
+    },
+    {
+      "campaign_id": "cp002",
+      "campaign_name": "Satin Sleep — Holiday Gift Guide",
+      "description": "Multi-channel holiday campaign positioning satin pillowcases and sleep gift sets as the perfect self-care gift. Ran across email, paid search, and Pinterest.",
+      "channel": "multi_channel",
+      "platform": "Email + Google Search + Pinterest",
+      "objective": "Revenue / Gift Purchases",
+      "period_start": "2026-11-01",
+      "period_end": "2026-12-24",
+      "target_audience": "Women 25-45, gift shoppers, existing customers + lookalike audiences",
+      "hero_sku": "KT-GIFT-SATIN-SET",
+      "spend_usd": 62400,
+      "impressions": 3100000,
+      "clicks": 124000,
+      "ctr": 0.04,
+      "conversions": 8680,
+      "cvr": 0.07,
+      "revenue_attributed_usd": 416640,
+      "roas": 6.68,
+      "cpa_usd": 7.19,
+      "new_customer_pct": 0.44,
+      "avg_order_value": 47.99,
+      "top_creative": "Email: 'The Gift She Actually Wants' — 48.2% open rate, 11.4% CTR",
+      "notes": "Email drove 62% of revenue at lowest CPA ($3.10). Pinterest drove strong gift set discovery. Paid search captured high-intent 'satin pillowcase gift' queries. ROAS well above 4x target."
+    },
+    {
+      "campaign_id": "cp003",
+      "campaign_name": "Shampoo Bar — Eco Beauty Launch",
+      "description": "Awareness and conversion campaign for the Restore Shampoo Bar targeting eco-conscious beauty shoppers. Influencer seeding + paid social + organic content.",
+      "channel": "paid_social",
+      "platform": "Instagram + YouTube",
+      "objective": "Awareness + Conversion",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-30",
+      "target_audience": "Women 22-40, interest in sustainable beauty, clean haircare, zero-waste lifestyle",
+      "hero_sku": "KT-SHMP-BAR-RESTORE",
+      "spend_usd": 31800,
+      "impressions": 2860000,
+      "clicks": 71500,
+      "ctr": 0.025,
+      "conversions": 2288,
+      "cvr": 0.032,
+      "revenue_attributed_usd": 32032,
+      "roas": 1.01,
+      "cpa_usd": 13.90,
+      "new_customer_pct": 0.83,
+      "avg_order_value": 14.00,
+      "top_creative": "YouTube pre-roll '30-day shampoo bar switch challenge' — 2.1M views, 4.8% click-through",
+      "notes": "ROAS below 2x target due to low AOV on single-SKU shampoo bar. Recommend bundling with conditioner bar or promoting multi-pack to lift AOV. Strong new customer acquisition (83%) — high LTV potential from Eco Shopper segment."
+    },
+    {
+      "campaign_id": "cp004",
+      "campaign_name": "Claw Clip Collection — Spring Drop",
+      "description": "Product launch campaign for seasonal claw clip colorways. Heavy TikTok organic amplification + paid retargeting to existing customers and site visitors.",
+      "channel": "paid_social",
+      "platform": "TikTok + Facebook",
+      "objective": "Product Launch / Conversion",
+      "period_start": "2026-03-15",
+      "period_end": "2026-04-15",
+      "target_audience": "Women 16-34, existing Kitsch customers + 90-day site visitors + lookalike",
+      "hero_sku": "KT-ACC-CLAW-MINI",
+      "spend_usd": 22600,
+      "impressions": 3390000,
+      "clicks": 101700,
+      "ctr": 0.03,
+      "conversions": 4576,
+      "cvr": 0.045,
+      "revenue_attributed_usd": 54912,
+      "roas": 2.43,
+      "cpa_usd": 4.94,
+      "new_customer_pct": 0.58,
+      "avg_order_value": 12.00,
+      "top_creative": "TikTok 'color drop' reveal video — 5.6M organic views, 420K saves",
+      "notes": "Lowest CPA of all campaigns ($4.94) driven by strong organic TikTok halo effect. Retargeting to existing customers converted at 8.2% CVR. AOV limited by single-item clip price — future campaigns should push clip bundles or outfit pairings to lift basket."
+    }
+  ],
+
+  "campaign_insights": {
+    "generated_at": "2026-09-29T10:00:00Z",
+    "period": "2026-03 to 2026-09",
+    "total_spend_usd": 165000,
+    "total_revenue_attributed_usd": 611664,
+    "blended_roas": 3.71,
+    "total_conversions": 19404,
+    "blended_cpa_usd": 8.50,
+    "new_customer_pct_avg": 0.64,
+    "summary": "Across 4 campaigns, Kitsch generated $611K in attributed revenue on $165K spend (3.71x blended ROAS). The Holiday Gift Guide (cp002) was the highest-revenue campaign at $416K and 6.68x ROAS. The Shampoo Bar launch (cp003) underperformed on ROAS (1.01x) due to low single-item AOV — bundling is the key lever. TikTok is Kitsch's strongest paid channel, driving viral moments on both the Heatless Curling Set and Claw Clip campaigns.",
+    "top_campaign_by_roas": "cp002 — Satin Sleep Holiday Gift Guide (6.68x)",
+    "top_campaign_by_conversions": "cp002 — Satin Sleep Holiday Gift Guide (8,680 conversions)",
+    "top_campaign_by_new_customers": "cp003 — Shampoo Bar Eco Beauty Launch (83% new customers)",
+    "lowest_cpa_campaign": "cp004 — Claw Clip Spring Drop ($4.94 CPA)",
+    "key_insights": [
+      "TikTok organic amplification is Kitsch's most powerful growth lever — cp001 and cp004 both benefited from viral moments that multiplied paid reach at no extra cost",
+      "Email is the highest-ROAS channel within multi-channel campaigns — Holiday Gift Guide email alone drove 62% of cp002 revenue",
+      "Shampoo Bar AOV ($14) is too low for efficient standalone paid campaigns — bundle with Conditioner Bar or promote multi-packs to hit $28+ AOV",
+      "Gift sets command higher AOV ($48) and strong gifting-intent conversion — lean into this positioning for Q4 and Valentine's Day",
+      "83% new customer rate on Shampoo Bar campaign suggests eco-beauty audience is a strong acquisition pool with high LTV potential (Eco Shoppers segment: $154 CLV)"
+    ],
+    "recommendations": [
+      "Launch always-on TikTok campaign for Heatless Curling Set — proven viral product with repeatable content format",
+      "Bundle Restore + Repair Shampoo Bar in next eco campaign to lift AOV above $25",
+      "Expand Holiday Gift Guide to include Curl & Style Gift Set alongside Satin Sleep Set",
+      "Test Pinterest as a standalone channel for gift campaigns — strong gift discovery performance in cp002",
+      "Retarget Shampoo Bar purchasers (cp003) with Conditioner Bar email sequence — high LTV segment, low acquisition cost already paid"
+    ]
+  },
+
   "datasets": [
     {
       "id": "ds001",
@@ -1129,6 +1262,14 @@
       "last_updated": "2026-09-22",
       "region": "US",
       "table_count": 3
+    },
+    {
+      "id": "ds006",
+      "name": "marketing_campaigns",
+      "description": "Paid campaign performance by campaign — spend, impressions, clicks, conversions, ROAS, CPA, new customer rate, AOV, and creative insights",
+      "last_updated": "2026-09-29",
+      "region": "US",
+      "table_count": 2
     }
   ],
 
@@ -1286,6 +1427,20 @@
       "executed_at": "2026-09-22T10:00:00Z",
       "execution_ms": 290,
       "rows_returned": 5
+    },
+    {
+      "query_id": "qr05",
+      "sql": "SELECT campaign_name, spend_usd, revenue_attributed_usd, roas, cpa_usd, conversions FROM marketing_campaigns.campaign_performance ORDER BY roas DESC",
+      "executed_at": "2026-09-29T10:05:00Z",
+      "execution_ms": 340,
+      "rows_returned": 4
+    },
+    {
+      "query_id": "qr06",
+      "sql": "SELECT campaign_name, channel, new_customer_pct, avg_order_value, top_creative FROM marketing_campaigns.campaign_performance ORDER BY new_customer_pct DESC",
+      "executed_at": "2026-09-29T10:08:00Z",
+      "execution_ms": 280,
+      "rows_returned": 4
     }
   ],
 
